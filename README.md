@@ -61,12 +61,12 @@ The registration of an ARDI is handled in two ways:
    + Request body: valid DRS (Digital Rightsholder Statement) ({application/xml; charset=utf-8, application/json; charset=utf-8}) according 
    to the LCC DRS schema.
         
-        application/xml; charset=utf-8
-        ==============================
+        application/xml
+        ===============
         Look for the xml sample [here](https://github.com/Ediser/ARDI-service/blob/master/low-level-design.md)
    
-        application/json; charset=utf-8
-        ==============================
+        application/json
+        ================
         (To be provided)
         Look for the json sample [here]()
    

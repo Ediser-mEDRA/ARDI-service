@@ -63,11 +63,12 @@ The registration of an ARDI is handled in two ways:
         
         application/xml; charset=utf-8
         ==============================
-   
+        Look for the xml sample [here](https://github.com/Ediser/ARDI-service/blob/master/low-level-design.md)
    
         application/json; charset=utf-8
         ==============================
         (To be provided)
+        Look for the json sample [here]()
    
    + Response body
       

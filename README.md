@@ -15,9 +15,7 @@ Table of contents
 
 Useful links
 ============
-* [Low level design](https://github.com/Ediser/ARDI-service/edit/master/README.md)
-* [API Documentation](https://github.com/openpermissions/onboarding-srv/blob/master/documents/apiary/api.md)
-* [How to use the Onboarding Service](https://github.com/openpermissions/onboarding-srv/blob/master/documents/markdown/how-to-onboard.md)
+* [Low level design](https://github.com/Ediser/ARDI-service/blob/master/README.md)
 
 Right-aware DOI suite overview
 ==============================

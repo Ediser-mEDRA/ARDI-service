@@ -11,3 +11,6 @@ in mEDRA Hub repository on mEDRA servers, through the dedicated API (Hub service
 
 The following diagram depicts the entire process of registering a DRS, and onboard the metadata agreed with the Copyright Hub in the mEDRA Hub 
 repository.
+
+![low-level-design](https://user-images.githubusercontent.com/39902417/41361845-4c93ca44-6f30-11e8-92a9-3a26a843f281.png)
+

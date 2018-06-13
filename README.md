@@ -15,7 +15,7 @@ Table of contents
 
 Useful links
 ============
-* [Low level design](https://github.com/Ediser/ARDI-service/blob/master/README.md)
+* [Low level design](https://github.com/Ediser/ARDI-service/blob/master/low-level-design.md)
 
 Right-aware DOI suite overview
 ==============================

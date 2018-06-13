@@ -273,9 +273,13 @@ The registration of an ARDI is handled in two ways:
    Using the XML upload interface for manual registration
    ======================================================
    Using the XML upload interface sending the file containing the DRS to the API, for manual registration
+   
    HOST: https://ardi-dev.medra.org/ardi-ra/ardi/logon-page.html
+   
    ![login-page](https://user-images.githubusercontent.com/39902417/41343402-ca92bd7e-6efe-11e8-8985-083fa8b8ee57.PNG)
+   
    ## Authorization
+ 
  This interface requires a basic authentication, the user must be registered (username and password) on mEDRA in order to achieve the 
  registration. Request Registers valid DRS (Digital Rightsholder Statement) from request body ({application/xml; charset=utf-8, 
  application/json; charset=utf-8})
@@ -289,6 +293,7 @@ The registration of an ARDI is handled in two ways:
 
  After the user has successfully logged in, the following page is display to allow the user to select the file containing the valid DRS to 
  be submitted.
+ 
  https://ardi-dev.medra.org/ardi-ra/ardi/reserved/upload-page.html
  
 ![upload-page](https://user-images.githubusercontent.com/39902417/41341832-fdf47f12-6efa-11e8-932e-e2c986a6836a.png)

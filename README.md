@@ -360,6 +360,7 @@ The registration of an ARDI is handled in two ways:
 | Authentication  | Basic Authentication (username:password)        | string    | yes       |
 | request body    | valid DRS (Digital Rightsholder Statement) file | file      | yes       |
 
- After the user have been performed the login successfully, the following page is display to allow the user to select the file that contains the valid DRS to submitted.
+ After the user has successfully logged in, the following page is display to allow the user to select the file containing the valid DRS to be submitted.
  https://ardi-dev.medra.org/ardi-ra/ardi/reserved/upload-page.html
  
+![upload-page](https://user-images.githubusercontent.com/39902417/41341832-fdf47f12-6efa-11e8-932e-e2c986a6836a.png)

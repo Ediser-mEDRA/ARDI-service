@@ -63,7 +63,7 @@ The registration of an ARDI is handled in two ways:
         
         application/xml
         ===============
-        Look for the xml sample [here](https://github.com/Ediser/ARDI-service/blob/master/low-level-design.md)
+        Look for the xml sample [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
    
         application/json
         ================

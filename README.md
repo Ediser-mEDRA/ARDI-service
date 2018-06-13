@@ -59,9 +59,14 @@ The registration of an ARDI is handled in two ways:
          
    + Request body: valid DRS (Digital Rightsholder Statement) ({application/xml; charset=utf-8, application/json; charset=utf-8}) according 
    to the LCC DRS schema.
+        
+        application/xml; charset=utf-8
+        ==============================
    
-   application/xml; charset=utf-8
-   ==============================
+   
+        application/json; charset=utf-8
+        ==============================
+        (To be provided)
    
    + Response body
       
@@ -262,9 +267,6 @@ The registration of an ARDI is handled in two ways:
                     "endTimestamp": "13-06-2018 10:29:50"
                   }
           }
-   application/json; charset=utf-8
-   ==============================
-   (To be provided)
    
    Using the XML upload interface for manual registration
    ======================================================

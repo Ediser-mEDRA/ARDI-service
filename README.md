@@ -6,8 +6,8 @@ Table of contents
    * [Right-aware DOI suite overview](#right-aware-doi-suite-overview)
    * [ARDITO registration tool](#ardito-registration-tool)
       * [Directly via the API for B2B registrations](#directly-via-the-api-for-b2b-registrations)
-           * [application/xml](#application-xml)
-           * [application/json](#application-json)
+           * [application xml](#application-xml)
+           * [application json](#application-json)
       * [Using the XML upload interface for manual registration](#using-the-xml-upload-interface-for-manual-registration)
    * [Dependency](#dependency)
 <!--te-->
@@ -62,14 +62,13 @@ The registration of an ARDI is handled in two ways:
    + Request body: valid DRS (Digital Rightsholder Statement) ({application/xml; charset=utf-8, application/json; charset=utf-8}) 
    according to the LCC DRS schema.
         
-        application/xml
+        application xml
         ---------------
         Look for the xml sample [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
    
-        application/json
+        application json
         ----------------
         (To be provided)
-        Look for the json sample [here]()
    
    + Response body
       

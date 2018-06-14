@@ -3,7 +3,6 @@ Table of contents
 
 <!--ts-->
    * [Table of contents](#table-of-contents)
-   * [Useful links](#useful-links)
    * [Right-aware DOI suite overview](#right-aware-doi-suite-overview)
    * [ARDITO registration tool](#ardito-registration-tool)
       * [Directly via the API for B2B registrations](#directly-via-the-api-for-b2b-registrations)
@@ -12,12 +11,6 @@ Table of contents
       * [Using the XML upload interface for manual registration](#using-the-xml-upload-interface-for-manual-registration)
    * [Dependency](#dependency)
 <!--te-->
-
-Useful links
-============
-* [Low level design](https://github.com/Ediser/ARDI-service/blob/master/low-level-design.md)
-* [ARDI generator](https://github.com/Ediser/ARDI-service/blob/master/ardi-generator.md)
-* [ARDI registrant format](https://github.com/Ediser/ARDI-service/blob/master/ardi-registration-format.md)
 
 Right-aware DOI suite overview
 ==============================

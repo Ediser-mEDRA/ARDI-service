@@ -9,7 +9,6 @@ Table of contents
            * [application xml](#application-xml)
            * [application json](#application-json)
       * [Using the XML upload interface for manual registration](#using-the-xml-upload-interface-for-manual-registration)
-   * [Dependency](#dependency)
 <!--te-->
 
 Right-aware DOI suite overview

@@ -1,3 +1,5 @@
+# Example of the DRS profile for an ARDI registration
+	
 	{
               
 	      <?xml version="1.0" encoding="UTF-8" standalone="no"?>

@@ -8,8 +8,10 @@ thus facilitating interoperability;
 *	maintain authoritative control on the issuing of ARDI names;
 *	avoid proliferation of “syntaxes”;
 *	provide an easy-to-plug-in service for any third party or intermediary offering services to creators including ARDI assignment.
+
 Therefore one DOI prefix has been assigned to the ARDI service (10.29414 for the development phase) and a simple algorithm using the 
 timestamp of the DRS submission has been implemented. The resulting syntax for an ARDI name is [ARDI DOI Prefix]/ardi:[timestamp]. 
+
 As this first release of the ARDI service allows for the deposit of one DRS at the time, the solution implemented is sufficient to ensure 
 uniqueness of the identifier, however the need for a more robust algorithm as well as the need for multiple prefixes for different 
 services, content industry or DRS provider will be assessed.

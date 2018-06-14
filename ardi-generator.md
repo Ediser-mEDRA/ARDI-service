@@ -1,3 +1,4 @@
+# ARDI generator identifier
 
 While typically DOI registrants are assigned with their own DOI prefix and are free to define a unique suffix for each asset identified 
 with a DOI, in the case of the ARDI service the decision was taken to automatically and centrally generate ARDI identifiers. This decision 

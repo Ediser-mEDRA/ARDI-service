@@ -16,6 +16,8 @@ Table of contents
 Useful links
 ============
 * [Low level design](https://github.com/Ediser/ARDI-service/blob/master/low-level-design.md)
+* [ARDI generator](https://github.com/Ediser/ARDI-service/blob/master/ardi-generator.md)
+* [ARDI registrant format](https://github.com/Ediser/ARDI-service/blob/master/ardi-registration-format.md)
 
 Right-aware DOI suite overview
 ==============================
@@ -62,11 +64,11 @@ The registration of an ARDI is handled in two ways:
    to the LCC DRS schema.
         
         application/xml
-        ===============
+        ---------------
         Look for the xml sample [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
    
         application/json
-        ================
+        ----------------
         (To be provided)
         Look for the json sample [here]()
    

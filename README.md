@@ -25,18 +25,24 @@ involves at least two infrastructures:
 
 ARDITO registration tool
 ========================
-The point of entry is the ARDI registration service REST API that allows a user to submit a DRS (Digital Rightsholder Statement) expressing 
-a rights notice on an individual content asset (creation in LCC terms) according to the LCC DRS schema.
+
+The point of entry is the ARDI registration service REST API that allows a user to submit a DRS (Digital Rightsholder Statement) 
+expressing a rights notice on an individual content asset (creation in LCC terms) according to the LCC DRS schema.
+
 The registration of an ARDI is handled in two ways:
     
    Directly via the API for B2B registrations
    ==========================================
    Directly via the API that hold the DRS as request body, for B2B registrations.
+   
    HOST: https://ardi-dev.medra.org/statement
+   
    ## Authorization
+   
    This API requires a basic authentication, the user must be registered (username and password) on mEDRA in order to achieve the
    registration. Request Registers valid DRS (Digital Rightsholder Statement) from request body ({application/xml; charset=utf-8, 
    application/json; charset=utf-8})
+   
    ### Required data for ARDI registration as result of DRS (Digital Rightsholder Statement) submission
 
    | Property        | Description                                | Type      | Mandatory |
@@ -53,8 +59,8 @@ The registration of an ARDI is handled in two ways:
          Accept: [application/json, application/xml]
          Authorization: Basic [username:password]
          
-   + Request body: valid DRS (Digital Rightsholder Statement) ({application/xml; charset=utf-8, application/json; charset=utf-8}) according 
-   to the LCC DRS schema.
+   + Request body: valid DRS (Digital Rightsholder Statement) ({application/xml; charset=utf-8, application/json; charset=utf-8}) 
+   according to the LCC DRS schema.
         
         application/xml
         ---------------
@@ -286,8 +292,8 @@ The registration of an ARDI is handled in two ways:
 | Authentication  | Basic Authentication (username:password)        | string    | yes       |
 | request body    | valid DRS (Digital Rightsholder Statement) file | file      | yes       |
 
- After the user has successfully logged in, the following page is display to allow the user to select the file containing the valid DRS to 
- be submitted.
+ After the user has successfully logged in, the following page is display to allow the user to select the file containing the valid DRS 
+ to be submitted.
  
  https://ardi-dev.medra.org/ardi-ra/ardi/reserved/upload-page.html
  

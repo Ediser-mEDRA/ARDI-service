@@ -43,7 +43,7 @@ The registration of an ARDI is handled in two ways:
    registration. Request Registers valid DRS (Digital Rightsholder Statement) from request body ({application/xml; charset=utf-8, 
    application/json; charset=utf-8})
    
-   ### Required data for ARDI registration as result of DRS (Digital Rightsholder Statement) submission
+   ### Required data for ARDI registration
 
    | Property        | Description                                | Type      | Mandatory |
    | :-------        | :----------                                | :---      | :-------- |
@@ -56,10 +56,13 @@ The registration of an ARDI is handled in two ways:
   
    + Request Headers
       
-         Accept: [application/xml]
-         Authorization: Basic [username:password]
+         * Accept: [application/xml]
+         * The authorization method and a space (e.g. "Authorization: Basic ") is then prepended to the encoded string. For example, if 
+         the browser uses Aladdin as the username and OpenSesame as the password, then the field's value is the base64-encoding of 
+         Aladdin:OpenSesame, or QWxhZGRpbjpPcGVuU2VzYW1l. Then the Authorization header will appear as:
+         Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l
          
-   + Request body: valid DRS (Digital Rightsholder Statement) (application/xml) according to the LCC DRS schema.
+   + Request body: valid DRS (Digital Rightsholder Statement) (application/xml) according to a subset of the LCC DRS schema.
         
         application xml
         ---------------
@@ -77,7 +80,8 @@ The registration of an ARDI is handled in two ways:
                       "subtype": "",
                       "asserterName": "PM (for test)",
                       "asserterDateTime": 1526284981000,
-                      "hubKey": "https://openpermissions.org/s1/hub1/a409c790edfd4b6c89c4ddf989ee7d25/asset/10de8d7526ec497093c669ca6b2c9095",
+                      "hubKey": 
+                      "https://openpermissions.org/s1/hub1/a409c790edfd4b6c89c4ddf989ee7d25/asset/10de8d7526ec497093c669ca6b2c9095",
                       "rightsHolders": [
                         {
                           "id": 264,

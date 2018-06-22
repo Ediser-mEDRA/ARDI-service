@@ -84,201 +84,135 @@ The registration of an ARDI is handled in two ways:
       
               {
                 "status": 200,
+                
+                "user": "DEMO",
+                "statement": {
+                "ardi": "10.29414/ardi:1510841716516",
+                "asserterName": "Italian Publisher Association",
+                "asserterDateTime": "2017-09-10T13:44:01",
+                "creation": {
+                "type": "lcc:LexicalWork",
+                "name": "Il mercato delle riviste scientifiche italiane: una ricerca",
+                "identifiers": [
                 {
-                        "user": "DEMO",
-                        "statement": {
-                          "ardi": "10.29414/ardi:1528878585467",
-                          "subtype": "",
-                          "asserterName": "PM (for test)",
-                          "asserterDateTime": 1526284981000,
-                          "hubKey": 
-                          "https://openpermissions.org/s1/hub1/a409c790edfd4b6c89c4ddf989ee7d25/asset/10de8d7526ec497093c669ca6b2c9095",
-                          "rightsHolders": [
-                            {
-                              "id": 264,
-                              "holderIdentifiers": [
-                                {
-                                  "type": "lcc:ISNI",
-                                  "value": "1234-5678-9876-0000"
-                                },
-                                {
-                                  "type": "lcc:ORCID",
-                                  "value": "1234-5678-9876-0023"
-                                }
-                              ],
-                              "holderName": {
-                                "nameValue": "Paola Pluto",
-                                "holderNameParts": [
-                                  {
-                                    "namePartType": "lcc:KeyName",
-                                    "value": "Mazzucchi"
-                                  },
-                                  {
-                                    "namePartType": "lcc:NamesBeforeKeyName",
-                                    "value": "Paola"
-                                  }
-                                ]
-                              },
-                              "holderContacts": [
-                                {
-                                  "emailAddress": "paola.pippo@email.it",
-                                  "phoneNumber": "02555555555",
-                                  "contactName": "Paola Pluto",
-                                  "postalAddress": "Corso di Porta Romana, 108 Milano 20132",
-                                  "url": "www.medra-dev.medra.org"
-                                },
-                                {
-                                  "emailAddress": "test-drs@email.it",
-                                  "phoneNumber": "0255222555",
-                                  "contactName": "Jehu Paperino",
-                                  "postalAddress": "Corso di Porta Romana, 108 Milano 20132",
-                                  "url": "www.ardi-dev.medra.org"
-                                }
-                              ]
-                            },
-                            {
-                              "id": 265,
-                              "holderIdentifiers": [
-                                {
-                                  "type": "lcc:ORCID",
-                                  "value": "1234-5678-9876-0023"
-                                },
-                                {
-                                  "type": "lcc:ISNI",
-                                  "value": "1234-5678-9876-2323"
-                                }
-                              ],
-                              "holderName": {
-                                "nameValue": "mEDRA",
-                                "holderNameParts": null
-                              },
-                              "holderContacts": [
-                                {
-                                  "emailAddress": "ivana.medra@medra.com",
-                                  "phoneNumber": "025522255521",
-                                  "contactName": "Pippo Pluto Paperino",
-                                  "postalAddress": "Corso di Porta Romana, 108 Milano 20132",
-                                  "url": "www.ardi-dev.medra.org"
-                                }
-                              ]
-                            },
-                            {
-                              "id": 266,
-                              "holderIdentifiers": [
-                                {
-                                  "type": "lcc:ISNI",
-                                  "value": "1234-5678-9876-2323"
-                                }
-                              ],
-                              "holderName": {
-                                "nameValue": "mEDRA staff support",
-                                "holderNameParts": [
-                                  {
-                                    "namePartType": "lcc:KeyName",
-                                    "value": "mEDRA tech"
-                                  },
-                                  {
-                                    "namePartType": "lcc:NamesBeforeKeyName",
-                                    "value": "staff support"
-                                  }
-                                ]
-                              },
-                              "holderContacts": [
-                                {
-                                  "emailAddress": "my.email@mail.it",
-                                  "phoneNumber": "021122255521",
-                                  "contactName": "Contact Pippo (for test)",
-                                  "postalAddress": "Corso di Porta Romana, 108 Milano 20132",
-                                  "url": "www.ardi-dev.medra.org"
-                                }
-                              ]
-                            }
-                          ],
-                          "creation": {
-                            "type": "lcc:LexicalWork",
-                            "name": "DRS name",
-                            "identifiers": [
-                              {
-                                "type": "lcc:ISBN",
-                                "value": "99X09100000134",
-                                "subtype": ""
-                              },
-                              {
-                                "type": "lcc:DOI",
-                                "value": "10.081.77910/000013447",
-                                "subtype": ""
-                              },
-                              {
-                                "type": "lcc:ISBNA",
-                                "value": "2018.910.229101343",
-                                "subtype": ""
-                              }
-                            ]
-                          },
-                          "rightsNotice": {
-                            "names": [
-                              "Paola Pippo (as a sample)",
-                              "mEDRA",
-                              "ARDITO"
-                            ],
-                            "years": [
-                              "2016",
-                              "2017"
-                            ],
-                            "extensions": [
-                              {
-                                "value": "Extension di test in lingua italiana",
-                                "language": "ita"
-                              },
-                              {
-                                "value": "All rights reserved. (test for english language)",
-                                "language": "eng"
-                              }
-                            ]
-                          },
-                          "furtherRightsInformation": {
-                            "assignmentTypes": [
-                              "lcc:CC_License_BY_NC"
-                            ],
-                            "rightAssignments": [
-                              "https://test.org/licenses/by-medra-staff/006/"
-                            ],
-                            "rightsInformationTypes": [
-                              "lcc:ApplicableLicense"
-                            ]
-                          },
-                          "drs": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<DigitalRightsholderStatement xmlns:drs=\"http://www.rightscom.com/2011/drs#\"\n                              xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n                              xsi:schemaLocation=\"http://www.rightscom.com/2011/drs# medra-drs.xsd\">\n              <DrsProfileType>lcc:DrsProfile_ARDI</DrsProfileType>\n\t            <Right>\t\n\t\t            <RightIdentifier IdentifierType=\"lcc:ARDI\">\n         <IdentifierValue>10.29414/ardi:1528878585467</IdentifierValue>\n      </RightIdentifier>\n      <RightStatus>lcc:EffectiveRight</RightStatus>\n\t\t            <Rightsholder>\n                  <Identifier IdentifierType=\"lcc:ISNI\">\n                    <IdentifierValue>1234-5678-9876-0000</IdentifierValue>\n                  </Identifier>\n                  <Identifier IdentifierType=\"lcc:ORCID\">\n                    <IdentifierValue>1234-5678-9876-0023</IdentifierValue>\n                  </Identifier>\n                  <Name>\n                    <NameValue>Paola Pluto</NameValue>\n                    <NamePart NamePartType=\"lcc:KeyName\">Mazzucchi</NamePart>\n                    <NamePart NamePartType=\"lcc:NamesBeforeKeyName\">Paola</NamePart>\n                  </Name>\n                  <Contact>\n                    <Name>Paola Pluto</Name>\n                    <EmailAddress>paola.pippo@email.it</EmailAddress>\n                    <PhoneNumber>02555555555</PhoneNumber>\n                    <PostalAddress>Corso di Porta Romana, 108 Milano 20132</PostalAddress>\n                    <URL>www.medra-dev.medra.org</URL>\n                  </Contact>\n                  <Contact>\n                    <Name>Jehu Paperino</Name>\n                    <EmailAddress>test-drs@email.it</EmailAddress>\n                    <PhoneNumber>0255222555</PhoneNumber>\n                    <PostalAddress>Corso di Porta Romana, 108 Milano 20132</PostalAddress>\n                    <URL>www.ardi-dev.medra.org</URL>\n                  </Contact>\n\t\t            </Rightsholder>\n                <Rightsholder>\n                  <Identifier IdentifierType=\"lcc:ORCID\">\n                    <IdentifierValue>1234-5678-9876-0023</IdentifierValue>\n                  </Identifier>\n                  <Identifier IdentifierType=\"lcc:ISNI\">\n                    <IdentifierValue>1234-5678-9876-2323</IdentifierValue>\n                  </Identifier>\n                  <Name>\n                    <NameValue>mEDRA</NameValue>\n                  </Name>\n                  <Contact>\n                      <Name>Pippo Pluto Paperino</Name>\n                      <EmailAddress>ivana.medra@medra.com</EmailAddress>\n                      <PhoneNumber>025522255521</PhoneNumber>\n                      <PostalAddress>Corso di Porta Romana, 108 Milano 20132</PostalAddress>\n                      <URL>www.ardi-dev.medra.org</URL>\n                    </Contact>\n                </Rightsholder>\n                <Rightsholder>\n                  <Identifier IdentifierType=\"lcc:ISNI\">\n                    <IdentifierValue>1234-5678-9876-2323</IdentifierValue>\n                  </Identifier>\n                  <Name>\n                    <NameValue>mEDRA staff support</NameValue>\n                    <NamePart NamePartType=\"lcc:KeyName\">mEDRA tech</NamePart>\n                    <NamePart NamePartType=\"lcc:NamesBeforeKeyName\">staff support</NamePart>\n                  </Name>\n                  <Contact>\n                    <Name>Contact Pippo (for test)</Name>\n                    <EmailAddress>my.email@mail.it</EmailAddress>\n                    <PhoneNumber>021122255521</PhoneNumber>\n                    <PostalAddress>Corso di Porta Romana, 108 Milano 20132</PostalAddress>\n                    <URL>www.ardi-dev.medra.org</URL>\n                  </Contact>\n                </Rightsholder>\n                <ControlledCreation>\n                  <Identifier IdentifierType=\"lcc:ISBN\">\n                    <IdentifierValue>99X09100000134</IdentifierValue>\n                  </Identifier>\n                  <Identifier IdentifierType=\"lcc:DOI\">\n                    <IdentifierValue>10.081.77910/000013447</IdentifierValue>\n                  </Identifier>\n                  <Identifier IdentifierType=\"lcc:ISBNA\">\n                    <IdentifierValue>2018.910.229101343</IdentifierValue>\n                  </Identifier>\n                  <Name>DRS name</Name>\n                  <CreationType>lcc:LexicalWork</CreationType>\n                </ControlledCreation>\n              <UseType>lcc:All</UseType>\n              <ControlType>lcc:All</ControlType>\n              <RightsNotice>\n                <Name>Paola Pippo (as a sample)</Name>\n                <Name>mEDRA</Name>\n                <Name>ARDITO</Name>\n                <Year>2016</Year>\n                <Year>2017</Year>\n                <Extension Language=\"ita\">Extension di test in lingua italiana</Extension>\n                <Extension Language=\"eng\">All rights reserved. (test for english language)</Extension>\n              </RightsNotice>\n              <FurtherRightsInformation> <!-- relates to RightsPolicyType = lcc:CC_License_BY_NC-->\n                <RightsAssignmentType>lcc:CC_License_BY_NC</RightsAssignmentType> \n                <RelatedRightAssignment IdentifierType=\"lcc:URI\"> \n                  <IdentifierValue>https://test.org/licenses/by-medra-staff/006/</IdentifierValue>  \n                </RelatedRightAssignment>                            \n                <FurtherRightsInformationType>lcc:ApplicableLicense</FurtherRightsInformationType> \n              </FurtherRightsInformation>\n              <Territory>lcc:World</Territory>\n              <StartTime>2018-06-13</StartTime>\n              <EndTime>2018-12-31</EndTime>\n              <PercentageShare>100</PercentageShare>\n              <IsExclusive>lcc:True</IsExclusive>\n\t            </Right>\n            <Asserter>\n              <Identifier IdentifierType=\"lcc:ISNI\">\n                <IdentifierValue>1234-5678-9876-4444</IdentifierValue>\n              </Identifier>\n              <Name>PM (for test)</Name>\n            </Asserter>\n            <AssertionDateTime>2018-05-14T10:03:01</AssertionDateTime>\n           </DigitalRightsholderStatement>"
-                        },
-                        "accounting": [
-                          {
-                            "ardi": "10.29414/ardi:1528878585467",
-                            "service": "HANDLE",
-                            "operation": "CREATE",
-                            "result": "SUCCESS",
-                            "resultDescription": null,
-                            "timestamp": "13-06-2018 10:29:46"
-                          },
-                          {
-                            "ardi": "10.29414/ardi:1528878585467",
-                            "service": "HUB",
-                            "operation": "CREATE",
-                            "result": "SUCCESS",
-                            "resultDescription": null,
-                            "timestamp": "13-06-2018 10:29:50"
-                          },
-                          {
-                            "ardi": "10.29414/ardi:1528878585467",
-                            "service": "METADATA",
-                            "operation": "CREATE",
-                            "result": "SUCCESS",
-                            "resultDescription": null,
-                            "timestamp": "13-06-2018 10:29:50"
-                          }
-                        ],
-                        "startTimestamp": "13-06-2018 10:29:45",
-                        "endTimestamp": "13-06-2018 10:29:50"
-                      }
-              }
+                "type": "lcc:ISBN",
+                "value": "9788899630096",
+                "subtype": ""
+                }, {
+                "type": "lcc:DOI",
+                "value": "10.978.8899630/096",
+                "subtype": ""
+                }, {
+                "type": "lcc:ISBNA",
+                "value": "10.978.8899630/096",
+                "subtype": ""
+                }
+                ]
+                },
+                "rightsNotice": {
+                "names": [
+                "Anna Lionetti", "Pierfrancesco Attanasio"
+                ],
+                "years": [
+                "2016"
+                ],
+                "extensions": [
+                {
+                "value": "This article is published online with Open Access and distributed under the terms
+                of the Creative Commons Attribution Non-Commercial License (CC BY-NC 4.0).",
+                "language": "eng"
+                }, {
+                "value": "Il testo di questo articolo è rilasciato dagli autori in licenza Creative Commons
+                Attribuzione - Non commerciale (CC-BY-NC 4.0)",
+                "language": "ita"
+                }
+                ]
+                },
+                "furtherRightsInformation": {
+                "assignmentTypes": [
+                "lcc:CC_License_BY_NC"
+                ],
+                "rightAssignments": [
+                "https://creativecommons.org/licenses/by-nc/4.0/"
+                ],
+                "rightsInformationTypes": [
+                "lcc:ApplicableLicense"
+                ]
+                },
+                "drs": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\r\n<!--Sample XML file generated by
+                XMLSpy v2015 sp2 (x64) (http://www.altova.com)-->\r\n<DigitalRightsholderStatement
+                xmlns=\"http://www.rightscom.com/2011/drs#\" xmlns:drs=\"http://www.rightscom.com/2011/drs#\"
+                xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.rightscom.com/2011/drs#
+                https://ardi-dev.medra.org/schema/drs/1.0/medradrs.xsd\">\r\n\t<DrsProfileType>lcc:DrsProfile_ARDI</DrsProfileType>
+                \r\n\t<Right>\r\n\t\t<RightIdentifier
+
+                IdentifierType=\"lcc:ARDI\">\r\n\t\t<IdentifierValue>10.29414/ardi:1510841716516</IdentifierValue>\r\n\t</RightIdentifi
+                er>\r\n\t\t<RightStatus>lcc:EffectiveRight</RightStatus>\r\n\t\t<Rightsholder>\r\n\t\t\t<Identifier
+                IdentifierType=\"lcc:ORCID\">\r\n\t\t\t\t<IdentifierValue>orcid.org/0000-0001-6157-
+                8808</IdentifierValue>\r\n\t\t\t</Identifier>\r\n\t\t\t<Name>\r\n\t\t\t\t<NameValue>Anna
+                Lionetti</NameValue>\r\n\t\t\t\t<NamePart NamePartType=\"lcc:KeyName\">Lionetti</NamePart>\r\n\t\t\t\t<NamePart
+                NamePartType=\"lcc:NamesBeforeKeyName\">Anna</NamePart>\r\n\t\t\t</Name>\r\n\t\t</Rightsholder>\r\n\t\t<Rightsholder>\r
+                \n\t\t\t<Identifier IdentifierType=\"lcc:ORCID\">\r\n\t\t\t\t<IdentifierValue>orcid.org/0000-0001-7410-
+                6682</IdentifierValue>\r\n\t\t\t</Identifier>\r\n\t\t\t<Name>\r\n\t\t\t\t<NameValue>Pierfrancesco
+                Attanasio</NameValue>\r\n\t\t\t\t<NamePart NamePartType=\"lcc:KeyName\">Attanasio</NamePart>\r\n\t\t\t\t<NamePart
+                NamePartType=\"lcc:NamesBeforeKeyName\">Pierfrancesco</NamePart>\r\n\t\t\t</Name>\r\n\t\t</Rightsholder>\r\n\t\t<Contro
+                lledCreation>\r\n\t\t\t<Identifier
+                IdentifierType=\"lcc:ISBN\">\r\n\t\t\t\t<IdentifierValue>9788899630096</IdentifierValue>\r\n\t\t\t</Identifier>\r\n\t\t
+                \t<Identifier 
+                IdentifierType=\"lcc:DOI\">\r\n\t\t\t\t<IdentifierValue>10.978.8899630/096</IdentifierValue>\r\n\t\t\t</Identifier>\r\n
+                \t\t\t<Identifier
+                IdentifierType=\"lcc:ISBNA\">\r\n\t\t\t\t<IdentifierValue>10.978.8899630/096</IdentifierValue>\r\n\t\t\t</Identifier>\r
+                \n\t\t\t<Name>Il mercato delle riviste scientifiche italiane: una
+                ricerca</Name>\r\n\t\t\t<CreationType>lcc:LexicalWork</CreationType>\r\n\t\t<!--
+                \t<URL>http://www.giornaledellalibreria.it/presentazione-tra-editoria-e-universita-i-risultati-del-gruppo-di-  
+                lavorouniversita-di-verona-cineca-e-aie-2585.html</URL>--
+                >\r\n\t\t</ControlledCreation>\r\n\t\t<UseType>lcc:All</UseType>\r\n\t\t<ControlType>lcc:All</ControlType>\r\n\t\t<Righ
+                tsNotice>\r\n\t\t\t<Name>Anna Lionetti</Name>\r\n\t\t\t<Name>Pierfrancesco
+                Attanasio</Name>\r\n\t\t\t<Year>2016</Year>\r\n\t\t\t<Extension Language=\"eng\">This article is published online with
+                Open Access and distributed under the terms of the Creative Commons Attribution Non-Commercial License (CC BY-NC
+                4.0).</Extension>\r\n\t\t\t<Extension Language=\"ita\">Il testo di questo articolo è rilasciato dagli autori in licenza
+                Creative Commons Attribuzione - Non commerciale (CC-BY-NC
+                4.0)</Extension>\r\n\t\t</RightsNotice>\r\n\t\t<FurtherRightsInformation>\r\n\t\t\t<!-- relates to RightsPolicyType =
+                lcc:CC_License_BY_NC--
+                >\r\n\t\t\t<RightsAssignmentType>lcc:CC_License_BY_NC</RightsAssignmentType>\t\t\r\n\t\t<RelatedRightAssignment
+                IdentifierType=\"lcc:URI\">\r\n\t\t\t\t<IdentifierValue>https://creativecommons.org/licenses/bync/4.0/</IdentifierValue>
+                \r\n\t\t\t</RelatedRightAssignment>\r\n\r\n\t\t\t<FurtherRightsInformationType>lcc:ApplicableL
+                icense</FurtherRightsInformationType>\r\n\t\t</FurtherRightsInformation>\r\n\t\t<Territory>lcc:World</Territory>\r\n\t\
+                t<StartTime>2016-01-01</StartTime>\r\n\t\t<!-- <EndTime>2017-12-31</EndTime>--
+                >\r\n\t\t<PercentageShare>100</PercentageShare>\r\n\t\t<IsExclusive>lcc:True</IsExclusive>\r\n\t</Right>\r\n\t<!--
+                <Asserter><Name>Italian Publisher Association</Name></Asserter>-->\r\n\t<Asserter>\r\n\t\t<Identifier
+                IdentifierType=\"lcc:ISNI\">\r\n\t\t\t<IdentifierValue>1234-5678-9876-
+                4444</IdentifierValue>\r\n\t\t</Identifier>\r\n\t\t<Name>Italian Publisher
+                Association</Name>\r\n\t</Asserter>\r\n\t<AssertionDateTime>2017-09-
+                10T13:44:01</AssertionDateTime>\r\n</DigitalRightsholderStatement>\r\n"
+                },
+                "accounting": [
+                {
+                "ardi": "10.29414/ardi:1510841716516",
+                "service": "HANDLE",
+                "operation": "UPDATE",
+                "result": "SUCCESS",
+                "resultDescription": null,
+                "timestamp": "24-11-2017 13:00:23"
+                }, {
+                    "ardi": "10.29414/ardi:1510841716516",
+                     "service": "HUB",
+                     "operation": "UPDATE",
+                    "result": "SUCCESS",
+                    "resultDescription": null,
+                    "timestamp": "24-11-2017 13:00:25"
+                  }, {
+                    "ardi": "10.29414/ardi:1510841716516",
+                    "service": "METADATA",
+                    "operation": "UPDATE",
+                    "result": "SUCCESS",
+                    "resultDescription": null,
+                    "timestamp": "24-11-2017 13:00:25"
+                  }
+                  ],
+                  "startTimestamp": "24-11-2017 13:00:22",
+                  "endTimestamp": "24-11-2017 13:00:25"
+                }
    
    Using the XML upload interface for manual registration
    ======================================================

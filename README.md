@@ -40,15 +40,14 @@ The registration of an ARDI is handled in two ways:
    ## Authorization
    
    This API requires a basic authentication, the user must be registered (username and password) on mEDRA in order to achieve the
-   registration. Request Registers valid DRS (Digital Rightsholder Statement) from request body ({application/xml; charset=utf-8, 
-   application/json; charset=utf-8})
+   registration. Request valid DRS (Digital Rightsholder Statement) from request body ({application/xml; charset=utf-8})
    
    ### Required data for ARDI registration
 
    | Property        | Description                                | Type      | Mandatory |
    | :-------        | :----------                                | :---      | :-------- |
    | Authentication  | Basic Authentication (username:password)   | string    | yes       |
-   | request body    | valid DRS (Digital Rightsholder Statement) | xml/json  | yes       |
+   | request body    | valid DRS (Digital Rightsholder Statement) | xml       | yes       |
 
    + Request Method
  
@@ -62,8 +61,13 @@ The registration of an ARDI is handled in two ways:
          Aladdin:OpenSesame, or QWxhZGRpbjpPcGVuU2VzYW1l. Then the Authorization header will appear as:
          Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l
          
-   + Request body: valid DRS (Digital Rightsholder Statement) (application/xml) according to a subset of the LCC DRS schema.
-        
+   + Request body: valid DRS (Digital Rightsholder Statement) (application/xml) according to the LCC DRS schema. In order to allow the 
+   deposit of simple statement, the ARDI registration format contains a subset of group of elements taken from the DRS schema. In
+   mEDRA application, we have decided to simplify the structure of a Right, starting from two basic use cases:
+     * an (self-published) author wishing to declare his/her copyright ownership on a content
+     * a publisher wishing to indicate some basic copyright info and licence info (especially related to Open Access) on a content
+     Thus in mEDRA application a DRS is described by the following [link](https://ardi-dev.medra.org/ardi-ra/schema/drs/1.0/medra-drs.xsd):
+     
         application xml
         ---------------
         Look for the xml sample [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)

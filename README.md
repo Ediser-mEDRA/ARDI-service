@@ -239,14 +239,4 @@ The registration of an ARDI is handled in two ways:
  
 ![upload-page](https://user-images.githubusercontent.com/39902417/41341832-fdf47f12-6efa-11e8-932e-e2c986a6836a.png)
 
-Finally the ARDI registration service REST API returns a JSON response to the user submitting the DRS which includes:
-- The assigned ARDI, to be stored and reused by the registrant for following updates of the same DRS or to make available the ARDI 
-resolving to the landing page along the value chain
-- The full DRS metadata as submitted, that can be re-used to communicate with other systems in B2B mode. This is especially relevant 
-once GUIs for registrants will be developed on top of existing services, as users will be able to exploit DRS in the LCC format although 
-they might have no proficiency with it
-- The accounting data, providing results (success/failure) for each operation (creation/update) for each service (Handle System 
-service/Hub service/Metadata service). This solution is scalable to other services that might make use of the DRS and assigned ARDI in 
-the future, such as for example export to other third party systems.
-
 The json response body is the same as in the Result of registration via the API that hold the DRS as request body, for B2B registrations

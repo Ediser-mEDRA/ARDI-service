@@ -1,6 +1,6 @@
 **Table of contents**
 
-[TOC]
+[TOCM]
 
 # Install python and pip as local user
 Since a linux user do not have root access, and need to install a local python an pip for its own needs, the following recipes describes some tips to do to for the configuration:

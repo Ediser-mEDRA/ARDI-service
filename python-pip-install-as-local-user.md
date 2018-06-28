@@ -3,7 +3,7 @@
 [TOCM]
 
 # Install python and pip as local user
-Since a linux user do not have root access, and need to install a local python an pip for its own needs, the following recipes describes some tips to do to for the configuration:
+Since a linux user do not have root access, and need to install a local python an pip for its own needs, the following recipes describes some tips to do for the configuration:
 
 ## Install python to local directory
 Firstly i create a folder in my local directory and download a python distribution that meets the desired requirements in the official [python download mirror](https://www.python.org/ftp/python/ "Python download mirror")

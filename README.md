@@ -1,14 +1,13 @@
 Table of contents
 =================
 
-<!--ts-->
    * [Table of contents](#table-of-contents)
    * [Right-aware DOI suite overview](#right-aware-doi-suite-overview)
    * [ARDITO registration tool](#ardito-registration-tool)
       * [Directly via the API for B2B registrations](#directly-via-the-api-for-b2b-registrations)
            * [application xml](#application-xml)
       * [Using the XML upload interface for manual registration](#using-the-xml-upload-interface-for-manual-registration)
-<!--te-->
+
 
 Right-aware DOI suite overview
 ==============================

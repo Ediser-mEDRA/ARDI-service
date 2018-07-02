@@ -55,8 +55,8 @@ The registration of an ARDI is handled in two ways:
    + Request Headers
       
          * Accept: [application/xml]
-         * The authorization method and a space (e.g. "Authorization: Basic ") is then prepended to the encoded string. For example, if 
-         the browser uses Aladdin as the username and OpenSesame as the password, then the field's value is the base64-encoding of 
+         * The authorization method and a space (e.g. "Authorization: Basic ") is then prepended to the encoded string. For example, use
+         Aladdin as the username and OpenSesame as the password, then the field's value is the base64-encoding of 
          Aladdin:OpenSesame, or QWxhZGRpbjpPcGVuU2VzYW1l. Then the Authorization header will appear as:
          Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l
          

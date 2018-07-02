@@ -65,11 +65,13 @@ The registration of an ARDI is handled in two ways:
    
    ![basic-authentication](https://user-images.githubusercontent.com/39902417/42159008-9377df60-7df2-11e8-88c3-9df8843bb53a.png)
    
-   Then enter the user and the password as on the figure below (authentication on mEDRA database):
+   Then enter the user and the password as on the figure below (authentication on mEDRA application as DRS register):
    
    ![basic-authorization](https://user-images.githubusercontent.com/39902417/42159024-9f91cc7a-7df2-11e8-91cf-61c33a380b6d.png)
    
-   + Request body: valid DRS (Digital Rightsholder Statement) (application/xml) according to the LCC DRS schema. In order to allow the 
+   + Request body: 
+   
+   a valid DRS (Digital Rightsholder Statement) (application/xml) according to the LCC DRS schema. In order to allow the 
    deposit of simple statement, the ARDI registration format contains a subset of group of elements taken from the DRS schema. In
    mEDRA application, we have decided to simplify the structure of a Right, starting from two basic use cases:
      * an (self-published) author wishing to declare his/her copyright ownership on a content
@@ -80,8 +82,9 @@ The registration of an ARDI is handled in two ways:
         ---------------
         Look for the xml sample [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
    
-   + Response body
-      Finally the ARDI registration service REST API returns a JSON response to the user submitting the DRS which includes:
+   + Response body:
+   
+      finally the ARDI registration service REST API returns a JSON response to the user submitting the DRS which includes:
       * The assigned ARDI, to be stored and reused by the registrant for following updates of the same DRS or to make available the ARDI 
       resolving to the landing page along the value chain
       * The full DRS metadata as submitted, that can be re-used to communicate with other systems in B2B mode. This is especially relevant 

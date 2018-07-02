@@ -5,7 +5,6 @@ Table of contents
    * [Right-aware DOI suite overview](#right-aware-doi-suite-overview)
    * [ARDITO registration tool](#ardito-registration-tool)
       * [Directly via the API for B2B registrations](#directly-via-the-api-for-b2b-registrations)
-           * [application xml](#application-xml)
       * [Using the XML upload interface for manual registration](#using-the-xml-upload-interface-for-manual-registration)
 
 
@@ -76,28 +75,28 @@ The registration of an ARDI is handled in two ways:
    mEDRA application, we have decided to simplify the structure of a Right, starting from two basic use cases:
      * an (self-published) author wishing to declare his/her copyright ownership on a content
      * a publisher wishing to indicate some basic copyright info and licence info (especially related to Open Access) on a content
-     Thus in mEDRA application a DRS is described by the following [link](https://ardi-dev.medra.org/ardi-ra/schema/drs/1.0/medra-drs.xsd):
+     Thus in mEDRA application a DRS is described by the following [link](https://ardi-dev.medra.org/ardi-ra/schema/drs/1.0/medra-
+     drs.xsd).
      
-   application xml
-   ---------------
-   
-   Look for the xml sample [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
-   
-   + Response body:
-   
-      finally the ARDI registration service REST API returns a JSON response to the user submitting the DRS which includes:
-      * The assigned ARDI, to be stored and reused by the registrant for following updates of the same DRS or to make available the ARDI 
-      resolving to the landing page along the value chain
-      * The full DRS metadata as submitted, that can be re-used to communicate with other systems in B2B mode. This is especially relevant 
-      once GUIs for registrants will be developed on top of existing services, as users will be able to exploit DRS in the LCC format 
-      although they might have no proficiency with it
-      * The accounting data, providing results (success/failure) for each operation (creation/update)for each service (Handle System 
-      service/Hub service/Metadata service).  Example of a JSON response for a DRS update, assigned with an ARDI:
-      
-              {
-                "status": 200,
-                
-                "user": "DEMO",
+   Look for the xml sample to paste in the content request body [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-
+     xml.md)
+     
+  Finally the ARDI registration service REST API returns a JSON response to the user submitting the DRS which includes:
+  * The assigned ARDI, to be stored and reused by the registrant for following updates of the same DRS or to make available the ARDI 
+  resolving to the landing page along the value chain
+  * The full DRS metadata as submitted, that can be re-used to communicate with other systems in B2B mode. This is especially 
+  relevant 
+  once GUIs for registrants will be developed on top of existing services, as users will be able to exploit DRS in the LCC format 
+  although they might have no proficiency with it
+  * The accounting data, providing results (success/failure) for each operation (creation/update)for each service (Handle System 
+  service/Hub service/Metadata service).  Example of a JSON response for a DRS update, assigned with an ARDI:
+
+  + Response 200 (application/json; charset=UTF-8):
+
+     * Body
+               
+               {
+                  "user": "DEMO",
                   "statement": {
                     "ardi": "10.29414/ardi:1510841716516",
                     "asserterName": "Italian Publisher Association",

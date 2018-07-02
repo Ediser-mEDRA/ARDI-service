@@ -75,11 +75,9 @@ The registration of an ARDI is handled in two ways:
    mEDRA application, we have decided to simplify the structure of a Right, starting from two basic use cases:
      * an (self-published) author wishing to declare his/her copyright ownership on a content
      * a publisher wishing to indicate some basic copyright info and licence info (especially related to Open Access) on a content
-     Thus in mEDRA application a DRS is described by the following [link](https://ardi-dev.medra.org/ardi-ra/schema/drs/1.0/medra-
-     drs.xsd).
+     Thus in mEDRA application a DRS is described by the following      [link](https://ardi-dev.medra.org/ardi-ra/schema/drs/1.0/medra-drs.xsd).
      
-   Look for the xml sample to paste in the content request body [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-
-     xml.md)
+   Look for the xml sample to paste in the content request body [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
      
   Finally the ARDI registration service REST API returns a JSON response to the user submitting the DRS which includes:
     * The assigned ARDI, to be stored and reused by the registrant for following updates of the same DRS or to make available the ARDI 

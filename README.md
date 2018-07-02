@@ -224,14 +224,12 @@ The registration of an ARDI is handled in two ways:
    ## Authorization
  The user must enter his login credential (username and password) on mEDRA in order to achieve the submission.
 
-### Required data for ARDI registration as result of DRS (Digital Rightsholder Statement) submission
+### How to reach the upload page?
+The following screenshot display the link to hit to reach the upload page.
 
-| Property        | Description                                     | Type      | Mandatory |
-| :-------        | :----------                                     | :---      | :-------- |
-| Authentication  | Basic Authentication (username:password)        | string    | yes       |
-| request body    | valid DRS (Digital Rightsholder Statement) file | file      | yes       |
+![link-upload-page](https://user-images.githubusercontent.com/39902417/42158226-25fa2738-7df0-11e8-8853-543d6ff93d76.PNG)
 
- After the user has successfully logged in, the following page is display to allow the user to select the file containing the valid DRS 
+ Hit the link in screenshot above, and display the upload page that allow the user to select a file containing a valid DRS 
  to be submitted.
  
  https://ardi-dev.medra.org/ardi-ra/ardi/reserved/upload-page.html

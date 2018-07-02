@@ -55,11 +55,16 @@ The registration of an ARDI is handled in two ways:
    + Request Headers
       
          * Accept: [application/xml]
-         * The authorization method and a space (e.g. "Authorization: Basic ") is then prepended to the encoded string. For example, use
-         Aladdin as the username and OpenSesame as the password, then the field's value is the base64-encoding of 
-         Aladdin:OpenSesame, or QWxhZGRpbjpPcGVuU2VzYW1l. Then the Authorization header will appear as:
-         Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l
-         
+         * The authorization method: Basic, a space and an encoded string is appended after the space (e.g. "Authorization: Basic 
+         <encoded string>")
+   
+   To obtain the encoded string, perform the following steps:
+   •	Open a Rest API client like chrome://restclient/content/restclient.html on Mozzilla Forefox browser and choose the basic 
+   authentication:
+   
+   Then enter the user and the password as on the figure below (authentication on mEDRA database):
+   
+   
    + Request body: valid DRS (Digital Rightsholder Statement) (application/xml) according to the LCC DRS schema. In order to allow the 
    deposit of simple statement, the ARDI registration format contains a subset of group of elements taken from the DRS schema. In
    mEDRA application, we have decided to simplify the structure of a Right, starting from two basic use cases:

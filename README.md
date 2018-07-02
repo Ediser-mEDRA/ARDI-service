@@ -78,9 +78,10 @@ The registration of an ARDI is handled in two ways:
      * a publisher wishing to indicate some basic copyright info and licence info (especially related to Open Access) on a content
      Thus in mEDRA application a DRS is described by the following [link](https://ardi-dev.medra.org/ardi-ra/schema/drs/1.0/medra-drs.xsd):
      
-        application xml
-        ---------------
-        Look for the xml sample [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
+   application xml
+   ---------------
+   
+   Look for the xml sample [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
    
    + Response body:
    

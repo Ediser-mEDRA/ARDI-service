@@ -44,14 +44,16 @@ It should show the path to the python binary file, which is located in the direc
 
 The package installation manager for python to be install required the OpenSSL library. Install it first in a chosen local directory by 
 performing the following steps:
-    * Get the required or choose an distribution of OpenSSL
-      
+    
+   * Get the required or choose an distribution of OpenSSL
+   
       ````
         mkdir /development/python/openssl
         cd /development/python/openssl
         wget https://www.openssl.org/source/openssl-1.1.0h.tar.gz
         tar zxvf openssl-1.1.0h.tar.gz 
       ````
+      
    * Ready to configure, compile and install the source following its guideline
     
       ````
@@ -62,3 +64,40 @@ performing the following steps:
     
 Have a look on the documentation [here](https://github.com/openssl/openssl/blob/OpenSSL_1_0_2-stable/INSTALL) for any other configuration 
 before the OpenSSL configuration and installation.
+To verify if the installation is done successfully, run the following command: `openssl version` that display in shell windows the version 
+installed.
+
+After the shell must be instructed to use the new OpenSSL library with the following command:
+`export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/development/openssl/local/lib` 
+or another solution could the settings of the command in the `vi .bashrc`. 
+
+* Get the required pip python file in order to install the latest or a specific distribution
+
+   ````
+      cd /development/python/
+      wget https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+      
+   ````
+1. If the user location from which python is installed doesn't required TLS/SSL, then run the following command to install pip
+`python get-pip.py 'pip>6'` and the pip 1.5.6 version will be install or just run `python get-pip.py` to install the latest distribution.
+
+2. Otherwise, pip is configured with locations that require TLS/SSL, so the ssl module in the local Python installed should be abilitated 
+before fetching the pip installation from [URL](https://pypi.python.org/simple/pip/).
+
+To achieve it, the following steps must be fullfilled:
+ 
+ * Open Modules/Setup, and un-comment following part and save the file after
+ 
+   ````
+      vi /development/python/Python-2.7.14/Modules/Setup
+      #SSL=development/python/openssl/local
+      #_ssl _ssl.c \
+      #       -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \
+      #       -L$(SSL)/lib -lssl -lcrypto
+      
+   ````
+   
+   * Compile and install again the Python
+      ** `make & make install` python from source code 
+      ** then run the following command to install pip `python get-pip.py 'pip>6'` and the pip 1.5.6 version will be install or just run 
+      `python get-pip.py` to install the latest distribution.

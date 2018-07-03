@@ -19,7 +19,7 @@ The next step is to change the directory, and move in the unzip directory
 ````
 cd /development/python/Python-2.7.14
 ````
-and ready to compiled the source following its guideline
+and ready to configure, compile and install the source following its guideline
 ````
 ./configure --prefix=/development/python/2.7.14
 make && make install
@@ -39,3 +39,26 @@ At this point the user must logout to the current shell and open a new one. In t
 The following comand `which python` allow to check it.
 It should show the path to the python binary file, which is located in the directory: 
 `/development/python/Python-2.7.14/python`
+
+## Install pip in local directory as user different than root
+
+The package installation manager for python to be install required the OpenSSL library. Install it first in a chosen local directory by 
+performing the following steps:
+    * Get the required or choose an distribution of OpenSSL
+      
+      ````
+        mkdir /development/python/openssl
+        cd /development/python/openssl
+        wget https://www.openssl.org/source/openssl-1.1.0h.tar.gz
+        tar zxvf openssl-1.1.0h.tar.gz 
+      ````
+   * Ready to configure, compile and install the source following its guideline
+    
+      ````
+        mkdir local
+        ./config --prefix=/development/python/openssl/local --openssldir=/development/python/openssl/local
+        make && make install
+      ````
+    
+Have a look on the documentation [here](https://github.com/openssl/openssl/blob/OpenSSL_1_0_2-stable/INSTALL) for any other configuration 
+before the OpenSSL configuration and installation.

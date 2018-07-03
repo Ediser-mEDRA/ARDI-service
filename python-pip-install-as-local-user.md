@@ -98,6 +98,8 @@ To achieve it, the following steps must be fullfilled:
    ````
    
    * Compile and install again the Python
+      
       ** `make & make install` python from source code 
+      
       ** then run the following command to install pip `python get-pip.py 'pip>6'` and the pip 1.5.6 version will be install or just run 
       `python get-pip.py` to install the latest distribution.

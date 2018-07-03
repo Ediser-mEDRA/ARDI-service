@@ -30,7 +30,7 @@ Once the installation is done successfully, the linux shell must be instruct to 
 `vi /development/.bashrc` to set the environment variable:
 
 ```
-export PATH=/development/python/Python-2.7.14/:$PATH
+export PATH=/development/python/Python-2.7.14/bin:$PATH
 export PYTHONPATH=/development/python/Python-2.7.14
 ```
 Save the file and finally refresh the current shell session with the comand:

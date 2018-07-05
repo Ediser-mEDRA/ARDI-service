@@ -38,18 +38,23 @@ The registration of an ARDI is handled in two ways:
    A valid DRS (Digital Rightsholder Statement) (application/xml) according to the LCC DRS schema. In order to allow the 
    deposit of simple statement, the ARDI registration format contains a subset of group of elements taken from the DRS schema. In
    mEDRA application, we have decided to simplify the structure of a Right, starting from two basic use cases:
-     * an (self-published) author wishing to declare his/her copyright ownership on a content
-     * a publisher wishing to indicate some basic copyright info and licence info (especially related to Open Access) on a content
+     
+   * an (self-published) author wishing to declare his/her copyright ownership on a content
+     
+   * a publisher wishing to indicate some basic copyright info and licence info (especially related to Open Access) on a content
      Thus in mEDRA application a DRS is described by the following [link](https://ardi-dev.medra.org/ardi-ra/schema/drs/1.0/medra-drs.xsd).
    
    Finally the ARDI registration service REST API returns a JSON response to the user submitting the DRS which includes:
-    * The assigned ARDI, to be stored and reused by the registrant for following updates of the same DRS or to make available the ARDI 
-  resolving to the landing page along the value chain
-    * The full DRS metadata as submitted, that can be re-used to communicate with other systems in B2B mode. This is especially 
-  relevant once GUIs for registrants will be developed on top of existing services, as users will be able to exploit DRS in the LCC format 
-  although they might have no proficiency with it
-    * The accounting data, providing results (success/failure) for each operation (creation/update)for each service (Handle System 
-  service/Hub service/Metadata service).  Example of a JSON response for a DRS update, assigned with an ARDI:
+    
+   * The assigned ARDI, to be stored and reused by the registrant for following updates of the same DRS or to make available the ARDI 
+     resolving to the landing page along the value chain
+    
+   * The full DRS metadata as submitted, that can be re-used to communicate with other systems in B2B mode. This is especially 
+     relevant once GUIs for registrants will be developed on top of existing services, as users will be able to exploit DRS in the LCC 
+     format although they might have no proficiency with it
+    
+   * The accounting data, providing results (success/failure) for each operation (creation/update)for each service (Handle System 
+      service/Hub service/Metadata service).  Example of a JSON response for a DRS update, assigned with an ARDI:
 
    ## Authorization
    
@@ -86,7 +91,7 @@ The registration of an ARDI is handled in two ways:
    
    + Request body: 
      
-   Look for the xml sample to paste in the content request body [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
+   Look for the application/xml sample to paste as content in the request body [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
    
   + Response 200 (application/json; charset=UTF-8):
 
@@ -226,10 +231,10 @@ The registration of an ARDI is handled in two ways:
   ================================
   
   The response body contains the whole DigitalRightsholderStatement metadata element and a string **drs** that contain the whole xml 
-  sumbitted in the request body. To be sure that the submission has been successfully achieved, let's verify that the json response body, 
+  sumbitted in the request body. To be sure that the submission has been successfully achieved, let's verify that in the json response body, 
   the following array must contain all result **SUCCESS**
   
-        {
+        { ...
           "accounting": [
                         {
                           "ardi": "10.29414/ardi:1510841716516",
@@ -254,7 +259,117 @@ The registration of an ARDI is handled in two ways:
                             "timestamp": "24-11-2017 13:00:25"
                           }
                       ]
+           ...
         }
+        
+   One of the accounting could fail, look at sample below in case of **FAILURE** during onboarding in mEDRA CopyrightHub repository
+   
+        {
+           ...
+           "accounting": [
+                        {
+                          "ardi": "10.29414/ardi:1530787684558",
+                          "service": "HANDLE",
+                          "operation": "CREATE",
+                          "result": "SUCCESS",
+                          "resultDescription": null,
+                          "timestamp": "05-07-2018 12:48:04"
+                        },
+                        {
+                          "ardi": "10.29414/ardi:1530787684558",
+                          "service": "HUB",
+                          "operation": "CREATE",
+                          "result": "FAILURE",
+                          "resultDescription": "503 Service Unavailable",
+                          "timestamp": "05-07-2018 12:48:06"
+                        },
+                        {
+                          "ardi": "10.29414/ardi:1530787684558",
+                          "service": "METADATA",
+                          "operation": "CREATE",
+                          "result": "SUCCESS",
+                          "resultDescription": null,
+                          "timestamp": "05-07-2018 12:48:06"
+                        }
+                      ]
+           ...
+        }
+   
+   DRS submission with wrong username
+   ==================================
+   
+   + Request Method
+ 
+         [POST]
+  
+   + Request Headers
+      
+         * Accept: [application/xml]
+         * The authorization method: Basic, a space and an encoded string is appended after the space (e.g. "Authorization: Basic 
+         <encoded string>")
+   
+   To obtain the encoded string, perform the following steps:
+   
+   Open a Rest API client like chrome://restclient/content/restclient.html on Mozzilla Forefox browser and choose the basic 
+   authentication:
+   
+   ![basic-authentication](https://user-images.githubusercontent.com/39902417/42159008-9377df60-7df2-11e8-88c3-9df8843bb53a.png)
+   
+   Then enter the user and the password as on the figure below (authentication on mEDRA application as DRS register):
+   
+   ![basic-authorization](https://user-images.githubusercontent.com/39902417/42159024-9f91cc7a-7df2-11e8-91cf-61c33a380b6d.png)
+   
+   + Request body: 
+     
+   Look for the application/xml sample to paste as content in the request body [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
+   
+  + Response 200 (application/json; charset=UTF-8):
+
+    * Body
+               
+               {
+               
+               
+               }
+   
+   DRS submission with wrong password
+   ==================================
+   
+   + Request Method
+ 
+         [POST]
+  
+   + Request Headers
+      
+         * Accept: [application/xml]
+         * The authorization method: Basic, a space and an encoded string is appended after the space (e.g. "Authorization: Basic 
+         <encoded string>")
+   
+   To obtain the encoded string, perform the following steps:
+   
+   Open a Rest API client like chrome://restclient/content/restclient.html on Mozzilla Forefox browser and choose the basic 
+   authentication:
+   
+   ![basic-authentication](https://user-images.githubusercontent.com/39902417/42159008-9377df60-7df2-11e8-88c3-9df8843bb53a.png)
+   
+   Then enter the user and the password as on the figure below (authentication on mEDRA application as DRS register):
+   
+   ![basic-authorization](https://user-images.githubusercontent.com/39902417/42159024-9f91cc7a-7df2-11e8-91cf-61c33a380b6d.png)
+   
+   + Request body: 
+     
+   Look for the application/xml sample to paste as content in the request body [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
+   
+  + Response 200 (application/json; charset=UTF-8):
+
+    * Body
+               
+               {
+               
+               
+               }
+   
+   
    
    Using the XML upload interface for manual registration
    ======================================================

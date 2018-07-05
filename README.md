@@ -308,27 +308,20 @@ The registration of an ARDI is handled in two ways:
          * The authorization method: Basic, a space and an encoded string is appended after the space (e.g. "Authorization: Basic 
          <encoded string>")
    
-   To obtain the encoded string, perform the following steps:
-   
-   Open a Rest API client like chrome://restclient/content/restclient.html on Mozzilla Forefox browser and choose the basic 
-   authentication:
-   
-   ![basic-authentication](https://user-images.githubusercontent.com/39902417/42159008-9377df60-7df2-11e8-88c3-9df8843bb53a.png)
-   
-   Then enter the user and the password as on the figure below (authentication on mEDRA application as DRS register):
-   
-   ![basic-authorization](https://user-images.githubusercontent.com/39902417/42159024-9f91cc7a-7df2-11e8-91cf-61c33a380b6d.png)
-   
    + Request body: 
      
    Look for the application/xml sample to paste as content in the request body [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
    
-  + Response 200 (application/json; charset=UTF-8):
+  + Response 401 Unauthorized (application/json; charset=UTF-8):
 
     * Body
                
                {
-               
+                  "timestamp": 1530791989024,
+                  "status": 401,
+                  "error": "Unauthorized",
+                  "message": "UserDetailsService returned null, which is an interface contract violation",
+                  "path": "/ardi-ra/statement"
                
                }
    
@@ -345,29 +338,231 @@ The registration of an ARDI is handled in two ways:
          * The authorization method: Basic, a space and an encoded string is appended after the space (e.g. "Authorization: Basic 
          <encoded string>")
    
-   To obtain the encoded string, perform the following steps:
+   + Request body: 
+     
+   Look for the application/xml sample to paste as content in the request body [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
    
-   Open a Rest API client like chrome://restclient/content/restclient.html on Mozzilla Forefox browser and choose the basic 
-   authentication:
+  + Response 401 Unauthorized (application/json; charset=UTF-8):
+
+    * Body
+               
+               {
+               "timestamp": 1530791951195,
+                "status": 401,
+                "error": "Unauthorized",
+                "message": "Bad credentials",
+                "path": "/ardi-ra/statement"
+               
+               }
    
-   ![basic-authentication](https://user-images.githubusercontent.com/39902417/42159008-9377df60-7df2-11e8-88c3-9df8843bb53a.png)
+   DRS submission with wrong Content-Type in the Header
+   ==================================
    
-   Then enter the user and the password as on the figure below (authentication on mEDRA application as DRS register):
-   
-   ![basic-authorization](https://user-images.githubusercontent.com/39902417/42159024-9f91cc7a-7df2-11e8-91cf-61c33a380b6d.png)
+   + Request Method
+ 
+         [POST]
+  
+   + Request Headers
+      
+         * Accept: [application/json]
+         * The authorization method: Basic, a space and an encoded string is appended after the space (e.g. "Authorization: Basic 
+         <encoded string>")
    
    + Request body: 
      
    Look for the application/xml sample to paste as content in the request body [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
    
-  + Response 200 (application/json; charset=UTF-8):
+  + Response 415 Unsupported Media Type (application/json; charset=UTF-8):
 
     * Body
                
                {
-               
+                "timestamp": 1530792178198,
+                "status": 415,
+                "error": "Unsupported Media Type",
+                "exception": "org.springframework.web.HttpMediaTypeNotSupportedException",
+                "message": "Content type 'application/json' not supported",
+                "path": "/ardi-ra/statement"
                
                }
+   
+   
+   DRS submission with empty root element
+   ==================================
+   
+   + Request Method
+ 
+         [POST]
+  
+   + Request Headers
+      
+         * Accept: [application/json]
+         * The authorization method: Basic, a space and an encoded string is appended after the space (e.g. "Authorization: Basic 
+         <encoded string>")
+   
+   + Request body: 
+     
+          {
+                <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                <DigitalRightsholderStatement xmlns="http://www.rightscom.com/2011/drs#" 
+                    xmlns:drs="http://www.rightscom.com/2011/drs#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                    xsi:schemaLocation="http://www.rightscom.com/2011/drs# https://ardi.medra.org/schema/drs/1.0/medra-drs.xsd">
+                
+                </DigitalRightsholderStatement>
+          }
+   
+  + Response 400 Bad Request (application/json; charset=UTF-8):
+
+    * Body
+               
+           {
+                "status": 400,
+	              "timestamp": "05-07-2018 14:04:10",
+	              "message": "org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 456; cvc-complex-type.2.4.b: The content of 
+                element 'DigitalRightsholderStatement' is not complete. One of '{\"http://www.rightscom.com/2011/drs#\":DrsProfileType, 
+                \"http://www.rightscom.com/2011/drs#\":Right}' is expected.",
+	              "path": "/statement",
+	              "error": "Bad Request"
+               
+           }
+   
+   DRS submission with empty request body
+   ==============================
+   
+   + Request Method
+ 
+         [POST]
+  
+   + Request Headers
+      
+         * Accept: [application/json]
+         * The authorization method: Basic, a space and an encoded string is appended after the space (e.g. "Authorization: Basic 
+         <encoded string>")
+   
+   + Request body: 
+     
+        {
+        }
+        
+   
+  + Response 400 Bad Request (application/json; charset=UTF-8):
+
+    * Body
+               
+               {
+                
+                No body returned for response
+               
+               }
+   
+   DRS submission with wrong xml String in the request body (wrong attribute value of an identifier)
+   ==============================
+   
+   + Request Method
+ 
+         [POST]
+  
+   + Request Headers
+      
+         * Accept: [application/json]
+         * The authorization method: Basic, a space and an encoded string is appended after the space (e.g. "Authorization: Basic 
+         <encoded string>")
+   
+   + Request body: 
+     
+          {
+               <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+              <DigitalRightsholderStatement xmlns="http://www.rightscom.com/2011/drs#" xmlns:drs="http://www.rightscom.com/2011/drs#"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rightscom.com/2011/drs# https://ardidev.medra.org/schema/drs/1.0/medra-drs.xsd">
+                <DrsProfileType>lcc:DrsProfile_ARDI</DrsProfileType>
+                <Right>
+                  <RightStatus>lcc:EffectiveRight</RightStatus>
+                  <Rightsholder>
+                    <Identifier IdentifierType="lxx:ORCID">
+                      <IdentifierValue>orcid.org/0000-0001-6157-8808</IdentifierValue>
+                    </Identifier>
+                  <Name>
+                    <NameValue>Anna Lionetti</NameValue>
+                    <NamePart NamePartType="lcc:KeyName">Lionetti</NamePart>
+                    <NamePart NamePartType="lcc:NamesBeforeKeyName">Anna</NamePart>
+                  </Name>
+                  </Rightsholder>
+                  <Rightsholder>
+                    <Identifier IdentifierType="lcc:ORCID">
+                      <IdentifierValue>orcid.org/0000-0001-7410-6682</IdentifierValue>
+                    </Identifier>
+                    <Name>
+                      <NameValue>Pierfrancesco Attanasio</NameValue>
+                      <NamePart NamePartType="lcc:KeyName">Attanasio</NamePart>
+                      <NamePart NamePartType="lcc:NamesBeforeKeyName">Pierfrancesco</NamePart>
+                    </Name>
+                  </Rightsholder>
+                  <ControlledCreation>
+                    <Identifier IdentifierType="lcc:ISBN">
+                      <IdentifierValue>9788899630096</IdentifierValue>
+                    </Identifier>
+                    <Identifier IdentifierType="lcc:DOI">
+                      <IdentifierValue>10.978.8899630/096</IdentifierValue>
+                    </Identifier>
+                    <Identifier IdentifierType="lcc:ISBNA">
+                      <IdentifierValue>10.978.8899630/096</IdentifierValue>
+                    </Identifier>
+                      <Name>Il mercato delle riviste scientifiche italiane: una ricerca</Name>
+                      <CreationType>lcc:LexicalWork</CreationType>
+                      <URL>http://www.giornaledellalibreria.it/presentazione-tra-editoria-e-universita-i-risultati-del-gruppo-dilavoro-universita-di-verona-cineca-e-aie-2585.html</URL>
+                    </ControlledCreation>
+                    <UseType>lcc:All</UseType>
+                    <ControlType>lcc:All</ControlType>
+                    <RightsNotice>
+                    <Name>Anna Lionetti</Name>
+                    <Name>Pierfrancesco Attanasio</Name>
+                    <Year>2016</Year>
+                    <Extension Language="eng">This article is published online with Open Access and distributed under the
+                      terms of the Creative Commons Attribution Non-Commercial License (CC BY-NC 4.0).
+                    </Extension>
+                    <Extension Language="ita">Il testo è rilasciato dagli autori in licenza Creative Commons Attribuzione -
+                      Non commerciale (CC-BY-NC 4.0)
+                    </Extension>
+                    </RightsNotice>
+                    <FurtherRightsInformation>
+                      <RelatedRightAssignment IdentifierType="lcc:URI">
+                        <IdentifierValue>https://creativecommons.org/licenses/by-nc/4.0/</IdentifierValue>
+                      </RelatedRightAssignment>
+                      <RightsAssignmentType>lcc:CC_License_BY_NC</RightsAssignmentType>
+                      <FurtherRightsInformationType>lcc:ApplicableLicense</FurtherRightsInformationType>
+                    </FurtherRightsInformation>
+                    <Territory>lcc:World</Territory>
+                    <StartTime>2016-01-01</StartTime>
+                    <PercentageShare>100</PercentageShare>
+                    <IsExclusive>lcc:True</IsExclusive>
+                  </Right>
+                    <Asserter>
+                      <Identifier IdentifierType="lcc:ISNI">
+                      <IdentifierValue>1234-5678-9876-4444</IdentifierValue>
+                      </Identifier>
+                      <Name>Italian Publisher Association</Name>
+                    </Asserter>
+                    <AssertionDateTime>2017-09-10T13:44:01</AssertionDateTime>
+                  </DigitalRightsholderStatement>
+        }
+        
+   
+  + Response 400 Bad Request (application/json; charset=UTF-8):
+
+    * Body
+               
+               {
+                
+                "status": 400,
+	              "timestamp": "05-07-2018 14:21:32",
+	              "message": "org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1038; cvc-enumeration-valid: Value 'lxx:ORCID' 
+                is not facet-valid with respect to enumeration '[lcc:ISNI, lcc:IPICode, lcc:ORCID, lcc:LCC_Term]'. It must be a value 
+                from the enumeration.",
+	              "path": "/statement",
+	              "error": "Bad Request"
+               
+               }
+   
    
    
    

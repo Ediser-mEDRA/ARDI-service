@@ -590,6 +590,6 @@ The following screenshot display the link to hit to reach the upload page.
  
  https://ardi-dev.medra.org/ardi-ra/ardi/reserved/upload-page.html
  
-![upload-page](https://user-images.githubusercontent.com/39902417/41341832-fdf47f12-6efa-11e8-932e-e2c986a6836a.png)
+![upload-page-3](https://user-images.githubusercontent.com/39902417/42325292-1c73127e-8066-11e8-939c-314ee5a1ddb7.PNG)
 
 The json response body is the same as in the Result of registration via the API that hold the DRS as request body, for B2B registrations, except for the authentication who is required before the upload.

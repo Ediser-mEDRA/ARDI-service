@@ -583,7 +583,7 @@ The registration of an ARDI is handled in two ways:
 ### How to reach the upload page?
 The following screenshot display the link to hit to reach the upload page.
 
-![upload-page-2](https://user-images.githubusercontent.com/39902417/42325011-3e9f09e4-8065-11e8-8d7b-0e64e2257f52.png)
+![upload-page-2](https://user-images.githubusercontent.com/39902417/42325206-d09514d8-8065-11e8-87fc-4a9f077d1e03.png)
 
  Hit the link in screenshot above, and display the upload page that allow the user to select a file containing a valid DRS 
  to be submitted.

@@ -362,7 +362,7 @@ The registration of an ARDI is handled in two ways:
                
                }
    
-   ## DRS submission with wrong Content Type in the Header
+   ## DRS submission with wrong content type in the header
    
    + Request Method
  

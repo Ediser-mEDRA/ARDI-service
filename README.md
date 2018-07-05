@@ -35,6 +35,22 @@ The registration of an ARDI is handled in two ways:
    
    ENDPOINT: https://ardi-dev.medra.org/statement
    
+   A valid DRS (Digital Rightsholder Statement) (application/xml) according to the LCC DRS schema. In order to allow the 
+   deposit of simple statement, the ARDI registration format contains a subset of group of elements taken from the DRS schema. In
+   mEDRA application, we have decided to simplify the structure of a Right, starting from two basic use cases:
+     * an (self-published) author wishing to declare his/her copyright ownership on a content
+     * a publisher wishing to indicate some basic copyright info and licence info (especially related to Open Access) on a content
+     Thus in mEDRA application a DRS is described by the following [link](https://ardi-dev.medra.org/ardi-ra/schema/drs/1.0/medra-drs.xsd).
+   
+   Finally the ARDI registration service REST API returns a JSON response to the user submitting the DRS which includes:
+    * The assigned ARDI, to be stored and reused by the registrant for following updates of the same DRS or to make available the ARDI 
+  resolving to the landing page along the value chain
+    * The full DRS metadata as submitted, that can be re-used to communicate with other systems in B2B mode. This is especially 
+  relevant once GUIs for registrants will be developed on top of existing services, as users will be able to exploit DRS in the LCC format 
+  although they might have no proficiency with it
+    * The accounting data, providing results (success/failure) for each operation (creation/update)for each service (Handle System 
+  service/Hub service/Metadata service).  Example of a JSON response for a DRS update, assigned with an ARDI:
+
    ## Authorization
    
    This API requires a basic authentication, the user must be registered (username and password) on mEDRA in order to achieve the
@@ -42,10 +58,10 @@ The registration of an ARDI is handled in two ways:
    
    ### Required data for ARDI registration
 
-   | Property        | Description                                | Type      | Mandatory |
-   | :-------        | :----------                                | :---      | :-------- |
-   | Authentication  | Basic Authentication (username:password)   | string    | yes       |
-   | request body    | valid DRS (Digital Rightsholder Statement) | xml       | yes       |
+   | Property        | Description                                | Type                  | Mandatory |
+   | :-------        | :----------                                | :---                  | :-------- |
+   | Authentication  | Basic Authentication                       | string                | yes       |
+   | request body    | valid DRS (Digital Rightsholder Statement) | application/xml       | yes       |
 
    + Request Method
  
@@ -69,26 +85,9 @@ The registration of an ARDI is handled in two ways:
    ![basic-authorization](https://user-images.githubusercontent.com/39902417/42159024-9f91cc7a-7df2-11e8-91cf-61c33a380b6d.png)
    
    + Request body: 
-   
-   a valid DRS (Digital Rightsholder Statement) (application/xml) according to the LCC DRS schema. In order to allow the 
-   deposit of simple statement, the ARDI registration format contains a subset of group of elements taken from the DRS schema. In
-   mEDRA application, we have decided to simplify the structure of a Right, starting from two basic use cases:
-     * an (self-published) author wishing to declare his/her copyright ownership on a content
-     * a publisher wishing to indicate some basic copyright info and licence info (especially related to Open Access) on a content
-     Thus in mEDRA application a DRS is described by the following      [link](https://ardi-dev.medra.org/ardi-ra/schema/drs/1.0/medra-drs.xsd).
      
    Look for the xml sample to paste in the content request body [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
-     
-  Finally the ARDI registration service REST API returns a JSON response to the user submitting the DRS which includes:
-    * The assigned ARDI, to be stored and reused by the registrant for following updates of the same DRS or to make available the ARDI 
-  resolving to the landing page along the value chain
-    * The full DRS metadata as submitted, that can be re-used to communicate with other systems in B2B mode. This is especially 
-  relevant 
-  once GUIs for registrants will be developed on top of existing services, as users will be able to exploit DRS in the LCC format 
-  although they might have no proficiency with it
-    * The accounting data, providing results (success/failure) for each operation (creation/update)for each service (Handle System 
-  service/Hub service/Metadata service).  Example of a JSON response for a DRS update, assigned with an ARDI:
-
+   
   + Response 200 (application/json; charset=UTF-8):
 
     * Body
@@ -222,6 +221,40 @@ The registration of an ARDI is handled in two ways:
                   "startTimestamp": "24-11-2017 13:00:22",
                   "endTimestamp": "24-11-2017 13:00:25"
               }
+  
+  Description of the Response body
+  ================================
+  
+  The response body contains the whole DigitalRightsholderStatement metadata element and a string **drs** that contain the whole xml 
+  sumbitted in the request body. To be sure that the submission has been successfully achieved, let's verify that the json response body, 
+  the following array must contain all result **SUCCESS**
+  
+        {
+          "accounting": [
+                        {
+                          "ardi": "10.29414/ardi:1510841716516",
+                          "service": "HANDLE",
+                          "operation": "UPDATE",
+                          "result": "SUCCESS",
+                          "resultDescription": null,
+                          "timestamp": "24-11-2017 13:00:23"
+                        }, {
+                            "ardi": "10.29414/ardi:1510841716516",
+                             "service": "HUB",
+                             "operation": "UPDATE",
+                            "result": "SUCCESS",
+                            "resultDescription": null,
+                            "timestamp": "24-11-2017 13:00:25"
+                          }, {
+                            "ardi": "10.29414/ardi:1510841716516",
+                            "service": "METADATA",
+                            "operation": "UPDATE",
+                            "result": "SUCCESS",
+                            "resultDescription": null,
+                            "timestamp": "24-11-2017 13:00:25"
+                          }
+                      ]
+        }
    
    Using the XML upload interface for manual registration
    ======================================================

@@ -8,11 +8,11 @@ Table of contents
       	* [Authorization](#authorization)
       	* [Description of the Response body](#description-of-response-body)
       	* [DRS submission with wrong username](#DRS-submission-with-wrong-username)
-	* [DRS submission with wrong password](#DRS-submission-with-wrong-password)
-	* [DRS submission with wrong Content-Type in the Header](#DRS-submission-with-wrong-Content-Type-in-the-Header)
-	* [DRS submission with empty root element](#DRS-submission-with-empty-root-element)
-	* [DRS submission with empty request body](#DRS-submission-with-empty-request-body)
-	* [DRS submission with wrong xml String in the request body (wrong attribute value of an identifier)](#wrong-attribute-value)
+        * [DRS submission with wrong password](#DRS-submission-with-wrong-password)
+        * [DRS submission with wrong Content-Type in the Header](#DRS-submission-with-wrong-Content-Type-in-the-Header)
+        * [DRS submission with empty root element](#DRS-submission-with-empty-root-element)
+        * [DRS submission with empty request body](#DRS-submission-with-empty-request-body)
+        * [DRS submission with wrong xml String in the request body(wrong attribute value of an identifier)](#wrong-attribute-value)
       * [Using the XML upload interface for manual registration](#using-the-xml-upload-interface-for-manual-registration)
 
 
@@ -303,8 +303,8 @@ The registration of an ARDI is handled in two ways:
            ...
         }
    
-   DRS submission with wrong username
-   ==================================
+   ## DRS submission with wrong username
+   
    
    + Request Method
  
@@ -333,8 +333,7 @@ The registration of an ARDI is handled in two ways:
                
                }
    
-   DRS submission with wrong password
-   ==================================
+   ## DRS submission with wrong password
    
    + Request Method
  
@@ -363,8 +362,7 @@ The registration of an ARDI is handled in two ways:
                
                }
    
-   DRS submission with wrong Content-Type in the Header
-   ==================================
+   ## DRS submission with wrong Content-Type in the Header
    
    + Request Method
  
@@ -395,8 +393,7 @@ The registration of an ARDI is handled in two ways:
                }
    
    
-   DRS submission with empty root element
-   ==================================
+   ## DRS submission with empty root element
    
    + Request Method
  
@@ -434,8 +431,7 @@ The registration of an ARDI is handled in two ways:
                
            }
    
-   DRS submission with empty request body
-   ==============================
+   ## DRS submission with empty request body
    
    + Request Method
  
@@ -463,8 +459,7 @@ The registration of an ARDI is handled in two ways:
                
                }
    
-   DRS submission with wrong xml String in the request body (wrong attribute value of an identifier)
-   ==============================
+   ## DRS submission with wrong xml String in the request body (wrong attribute value of an identifier)
    
    + Request Method
  
@@ -597,4 +592,4 @@ The following screenshot display the link to hit to reach the upload page.
  
 ![upload-page](https://user-images.githubusercontent.com/39902417/41341832-fdf47f12-6efa-11e8-932e-e2c986a6836a.png)
 
-The json response body is the same as in the Result of registration via the API that hold the DRS as request body, for B2B registrations
+The json response body is the same as in the Result of registration via the API that hold the DRS as request body, for B2B registrations, except for the authentication who is required before the upload.

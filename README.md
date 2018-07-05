@@ -12,8 +12,7 @@ Table of contents
         * [DRS submission with wrong Content-Type in the Header](#drs-submission-with-wrong-content-type-in-the-Header)
         * [DRS submission with empty root element](#drs-submission-with-empty-root-element)
         * [DRS submission with empty request body](#drs-submission-with-empty-request-body)
-        * [DRS submission with wrong element or attribute value in the xml String in the request body](#drs-submission-with-wrong-
-	element-or-attribute-value-in-the-xml-string-in-the-request-body)
+        * [DRS submission with wrong element or attribute value in the xml String on request body](#drs-submission-with-wrong-element-or-attribute-value-in-the-xml-string-on-request-body)
       * [Using the XML upload interface for manual registration](#using-the-xml-upload-interface-for-manual-registration)
 
 

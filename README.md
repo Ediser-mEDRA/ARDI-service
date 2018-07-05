@@ -7,6 +7,7 @@ Table of contents
       * [Directly via the API for B2B registrations](#directly-via-the-api-for-b2b-registrations)
       	* [Authorization](#authorization)
       	* [Description of the Response body](#description-of-the-response-body)
+        * [DRS submission with correct parameters](#drs-submission-with-correct-parameters)
       	* [DRS submission with wrong username](#drs-submission-with-wrong-username)
         * [DRS submission with wrong password](#drs-submission-with-wrong-password)
         * [DRS submission with wrong content type in the header](#drs-submission-with-wrong-content-type-in-the-header)
@@ -96,7 +97,9 @@ The registration of an ARDI is handled in two ways:
    Then enter the user and the password as on the figure below (authentication on mEDRA application as DRS register):
    
    ![basic-authorization](https://user-images.githubusercontent.com/39902417/42159024-9f91cc7a-7df2-11e8-91cf-61c33a380b6d.png)
-   
+
+## DRS submission with correct parameters
+
    + Request body: 
      
    Look for the application/xml sample to paste as content in the request body [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)

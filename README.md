@@ -5,6 +5,14 @@ Table of contents
    * [Right-aware DOI suite overview](#right-aware-doi-suite-overview)
    * [ARDITO registration tool](#ardito-registration-tool)
       * [Directly via the API for B2B registrations](#directly-via-the-api-for-b2b-registrations)
+      	* [Authorization](#authorization)
+      	* [Description of the Response body](#description-of-response-body)
+      	* [DRS submission with wrong username](#DRS-submission-with-wrong-username)
+	* [DRS submission with wrong password](#DRS-submission-with-wrong-password)
+	* [DRS submission with wrong Content-Type in the Header](#DRS-submission-with-wrong-Content-Type-in-the-Header)
+	* [DRS submission with empty root element](#DRS-submission-with-empty-root-element)
+	* [DRS submission with empty request body](#DRS-submission-with-empty-request-body)
+	* [DRS submission with wrong xml String in the request body (wrong attribute value of an identifier)](#wrong-attribute-value)
       * [Using the XML upload interface for manual registration](#using-the-xml-upload-interface-for-manual-registration)
 
 

@@ -9,7 +9,7 @@ Table of contents
       	* [Description of the Response body](#description-of-the-response-body)
       	* [DRS submission with wrong username](#drs-submission-with-wrong-username)
         * [DRS submission with wrong password](#drs-submission-with-wrong-password)
-        * [DRS submission with wrong content type in the header](#drs-submission-with-wrong-content-type-in-the-Header)
+        * [DRS submission with wrong content type in the header](#drs-submission-with-wrong-content-type-in-the-header)
         * [DRS submission with empty root element](#drs-submission-with-empty-root-element)
         * [DRS submission with empty request body](#drs-submission-with-empty-request-body)
         * [DRS submission with wrong element or wrong attribute value of an identifier](#drs-submission-with-wrong-element-or-wrong-attribute-value-of-an-identifier)

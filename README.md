@@ -586,13 +586,13 @@ The registration of an ARDI is handled in two ways:
 ### How to reach the upload page?
 The following screenshot display the link to hit to reach the upload page.
 
-![upload-page-2](https://user-images.githubusercontent.com/39902417/42325206-d09514d8-8065-11e8-87fc-4a9f077d1e03.png)
+![link-2-upload-page](https://user-images.githubusercontent.com/39902417/42374224-cd6aa7de-8117-11e8-9e53-029451fbb5a5.png)
 
  Hit the link in screenshot above, and display the upload page that allow the user to select a file containing a valid DRS 
  to be submitted.
  
  https://ardi-dev.medra.org/ardi-ra/ardi/reserved/upload-page.html
  
-![upload-page-3](https://user-images.githubusercontent.com/39902417/42325292-1c73127e-8066-11e8-939c-314ee5a1ddb7.PNG)
+![upload-page-4](https://user-images.githubusercontent.com/39902417/42374231-d7ffe538-8117-11e8-83fd-3e608ce798db.PNG)
 
 The json response body is the same as in the Result of registration via the API that hold the DRS as request body, for B2B registrations, except for the authentication who is required before the upload.

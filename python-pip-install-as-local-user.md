@@ -79,7 +79,7 @@ or another solution could the settings of the command in the `vi .bashrc`.
       
    ````
 1. If the user location from which python is installed doesn't required TLS/SSL, then run the following command to install pip
-`python get-pip.py 'pip>6'` and the pip 1.5.6 version will be install or just run `python get-pip.py` to install the latest distribution.
+`python get-pip.py pip==1.5.6` and the pip 1.5.6 version will be install or just run `python get-pip.py` to install the latest distribution.
 
 2. Otherwise, pip is configured with locations that require TLS/SSL, so the ssl module in the local Python installed should be abilitated 
 before fetching the pip installation from [URL](https://pypi.python.org/simple/pip/).

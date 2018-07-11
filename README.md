@@ -417,7 +417,7 @@ The registration of an ARDI is handled in two ways:
 
     * Body
     
-     	 No body returned for response
+     	  No body returned for response
                
    
    ## DRS submission with wrong element or wrong attribute value of an identifier

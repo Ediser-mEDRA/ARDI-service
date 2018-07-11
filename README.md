@@ -336,18 +336,10 @@ The registration of an ARDI is handled in two ways:
    
    ## DRS submission with wrong content type in the header
    
-   + Request Method
- 
-         [POST]
-  
    + Request Headers
       
          * Content-Type: [application/json]
          * Http request with basic authentication
-   
-   + Request body: 
-     
-   Look for the application/xml sample to paste as content in the request body [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
    
   + Response 415 Unsupported Media Type (application/json; charset=UTF-8):
 
@@ -365,15 +357,6 @@ The registration of an ARDI is handled in two ways:
    
    
    ## DRS submission with empty root element
-   
-   + Request Method
- 
-         [POST]
-  
-   + Request Headers
-      
-         * Content-Type: [application/xml]
-         * Http request with basic authentication
    
    + Request body: 
      
@@ -401,16 +384,8 @@ The registration of an ARDI is handled in two ways:
    
    ## DRS submission with empty request body
    
-   + Request Method
- 
-         [POST]
-  
-   + Request Headers
-      
-         * Content-Type: [application/xml]
-         * Http request with basic authentication
    
-   + Request body: 
+  + Request body: 
         
    
   + Response 400 Bad Request (application/json; charset=UTF-8):
@@ -421,15 +396,6 @@ The registration of an ARDI is handled in two ways:
                
    
    ## DRS submission with wrong element or wrong attribute value of an identifier
-   
-   + Request Method
- 
-         [POST]
-  
-   + Request Headers
-      
-         * Content-Type: [application/xml]
-         * Http request with basic authentication
    
    + Request body: 
      

@@ -33,7 +33,7 @@ Here follows a summary of the high level workflow of ARDI web app:
      b)	success: proceed with the workflow
   3. ARDI generation
      
-     a)if the DRS does not contain an ARDI: creates a unique ARDI, assigns it to the DRS and proceeds with the workflow as a create
+     a) if the DRS does not contain an ARDI: creates a unique ARDI, assigns it to the DRS and proceeds with the workflow as a create
      
      b)	if the DRS already contains an ARDI: proceeds with the workflow as an update
   4. onboards data with the Copyright Hub

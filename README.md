@@ -15,7 +15,7 @@ Table of contents
         * [DRS submission with empty root element](#drs-submission-with-empty-root-element)
         * [DRS submission with empty request body](#drs-submission-with-empty-request-body)
         * [DRS submission with wrong element or wrong attribute value of an identifier](#drs-submission-with-wrong-element-or-wrong-attribute-value-of-an-identifier)
-      * [Using the XML upload interface for manual registration](#using-the-xml-upload-interface-for-manual-registration)
+      * [XML upload interface for manual registration](#xml-upload-interface-for-manual-registration)
 
 
 ARDI service overview
@@ -248,9 +248,11 @@ The registration of an ARDI is handled in two ways: Registration via the API for
   Description of the Response body
   ================================
   
-  The response body contains the whole DigitalRightsholderStatement metadata element and a string **drs** that contain the whole xml 
-  sumbitted in the request body. To be sure that the submission has been successfully achieved, let's verify that in the json response body, 
-  the following array must contain all result **SUCCESS**
+  The response body provided through the REST API in the form of a JSON includes:
+  * The assigned ARDI
+  * The full DRS metadata in the LCC compliant format.
+  * The accounting data, providing results (success/failure) for each operation (creation/update) for each service (Handle System/Hub service/Metadata service).
+  To be sure that the submission has been successfully achieved, in the JSON response body the following array must contain **SUCCESS** result for all the operations
   
         { ...
           "accounting": [
@@ -280,7 +282,7 @@ The registration of an ARDI is handled in two ways: Registration via the API for
            ...
         }
         
-   One of the accounting could fail, look at sample below in case of **FAILURE** during onboarding in mEDRA CopyrightHub repository
+   In case one or more operation fail, the JSON response contains **FAILURE**, as in the following example
    
         {
            ...
@@ -503,11 +505,15 @@ The registration of an ARDI is handled in two ways: Registration via the API for
    
    
    
-   Using the XML upload interface for manual registration
-   ======================================================
-   Using the XML upload interface sending the file containing the DRS to the API, for manual registration
+   XML upload interface for manual registration
+   ============================================
+   Using the XML upload interface allows to register an ARDI by manually uploading the DRS XML file to the API
    
    Access point: https://ardi-dev.medra.org/ardi-ra/ardi/logon-page.html
+   
+   Access point in production environment: https://ardi.medra.org/ardi-ra/ardi/logon-page.html
+   
+   Access point in staging environment: https://ardi-dev.medra.org/ardi-ra/ardi/logon-page.html
    
    ![login-page](https://user-images.githubusercontent.com/39902417/41343402-ca92bd7e-6efe-11e8-8985-083fa8b8ee57.PNG)
    
@@ -515,15 +521,16 @@ The registration of an ARDI is handled in two ways: Registration via the API for
  The user must enter his login credential (username and password) on mEDRA in order to achieve the submission.
 
 ### How to reach the upload page?
-The following screenshot display the link to hit to reach the upload page.
+The following screenshot displays the link to hit to reach the upload page.
 
 ![link-2-upload-page](https://user-images.githubusercontent.com/39902417/42374224-cd6aa7de-8117-11e8-9e53-029451fbb5a5.png)
 
- Hit the link in screenshot above, and display the upload page that allow the user to select a file containing a valid DRS 
- to be submitted.
+ By clicking the link in screenshot above the user gets to the page where to select and upload an XML file containing a valid DRS to be submitted.
  
- https://ardi-dev.medra.org/ardi-ra/ardi/reserved/upload-page.html
+ XML upload page in production enviroment: https://ardi.medra.org/ardi-ra/ardi/reserved/upload-page.html
+ 
+ XML upload page in staging environment: https://ardi-dev.medra.org/ardi-ra/ardi/reserved/upload-page.html
  
 ![upload-page-4](https://user-images.githubusercontent.com/39902417/42374231-d7ffe538-8117-11e8-83fd-3e608ce798db.PNG)
 
-The json response body is the same as in the Result of registration via the API that hold the DRS as request body, for B2B registrations.
+The JSON response body is the same as in the Result of registration via the API for B2B registrations.

@@ -511,6 +511,8 @@ The registration of an ARDI is handled in two ways: Registration via the API for
    
    Access point in production environment: https://ardi.medra.org/ardi-ra/ardi/logon-page.html
    
+   ![logon-page-ardi-prod](https://user-images.githubusercontent.com/39902417/43138435-2307685e-8f4f-11e8-8ce6-6fb7a5f39828.PNG)
+   
    Access point in staging environment: https://ardi-dev.medra.org/ardi-ra/ardi/logon-page.html
    
    ![login-page](https://user-images.githubusercontent.com/39902417/41343402-ca92bd7e-6efe-11e8-8985-083fa8b8ee57.PNG)
@@ -521,9 +523,13 @@ The registration of an ARDI is handled in two ways: Registration via the API for
 ### How to reach the upload page?
 The following screenshot displays the link to reach the upload page.
 
+![link-upload-page-ardi](https://user-images.githubusercontent.com/39902417/43138453-3343555c-8f4f-11e8-857e-e0944c0a5583.png)
+
  By clicking the link in screenshot above the user gets to the page where to select and upload an XML file containing a valid DRS to be submitted.
  
  XML upload page in production enviroment: https://ardi.medra.org/ardi-ra/ardi/reserved/upload-page.html
+ 
+ ![upload-page-ardi](https://user-images.githubusercontent.com/39902417/43138424-17cd8a36-8f4f-11e8-914b-587dde17f00e.png)
  
  XML upload page in staging environment: https://ardi-dev.medra.org/ardi-ra/ardi/reserved/upload-page.html
  

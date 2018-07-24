@@ -2,7 +2,8 @@ Table of contents
 =================
 
    * [Table of contents](#table-of-contents)
-   * [Right-aware DOI suite overview](#right-aware-doi-suite-overview)
+   * [ARDI service overview](#ardi-service-overview)
+      * [High level workflow description](#high-level-workflow-description)
    * [ARDITO registration tool](#ardito-registration-tool)
       * [Directly via the API for B2B registrations](#directly-via-the-api-for-b2b-registrations)
       	* [Authorization](#authorization)
@@ -17,17 +18,27 @@ Table of contents
       * [Using the XML upload interface for manual registration](#using-the-xml-upload-interface-for-manual-registration)
 
 
-Right-aware DOI suite overview
-==============================
-This service describes the technical features of the new tool that achieves the registration of a Digital Rightsholder Statement (DRS). The
-tool is a new web App for ARDITO taking care of the registration process of an ARDI identifier to be assigned to rights declarations,
-and includes a new registration schema based on the LCC DRS format and a new landing page making accessible to any users the chain of 
-declarations for a given identified content asset and interfaces for registrants. From technical point of view, the registration of a DRS 
-involves at least two infrastructures: 
- - The handle system that receive the ARDI identifier created, and persisted it for management purpose, resolution URL, etc.
- - The Open Permissions Platform Onboarding Service that receive the identifiers (isbn, doi, ardi, etc.) and onboard them to a repository
- within the Hub.
-
+ARDI service overview
+======================
+The ARDI service provides persistent and web resolvable identification of copyright deposits. The service features a new web resolvable identifier driven by DOI (ARDI), an interoperable standard format to express and communicate rights declarations (DRS - Digital Rightsholder Statement, based on LCC framework), resolvable links to the content identifiers, a new landing page making accessible to any users the chain of declarations for a given identified content asset and integration with the Copyright Hub.
+   
+   High level workflow description
+   ===============================
+Here follows a summary of the high level workflow of ARDI web app:
+  1. receives a DRS record in input
+  2. validation of DRS against the schema
+     a) failure: error – feedback and stop the workflow
+     b)	success: proceed with the workflow
+  3. ARDI generation
+     a)if the DRS does not contain an ARDI: creates a unique ARDI, assigns it to the DRS and proceeds with the workflow as a create
+     b)	if the DRS already contains an ARDI: proceeds with the workflow as an update
+  4. onboards data with the Copyright Hub
+  5. following onboarding, ARDI and content identifiers are indexed in the Copyright Hub index, for query purposes and used by Copyright Hub front-end tools
+  6. stores and maintains DRS metadata
+  7. builds and exposes the landing page for DRS information upon resolution of an ARDI directly or via resolution of the associated content identifier
+  8. mints the ARDI in the DOI Handle System, providing persistence and resolution driven by DOI
+  9. stores results of the above operations (accounting data) and provides feedback
+  
 ARDITO registration tool
 ========================
 

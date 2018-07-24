@@ -509,8 +509,6 @@ The registration of an ARDI is handled in two ways: Registration via the API for
    ============================================
    Using the XML upload interface allows to register an ARDI by manually uploading the DRS XML file to the API
    
-   Access point: https://ardi-dev.medra.org/ardi-ra/ardi/logon-page.html
-   
    Access point in production environment: https://ardi.medra.org/ardi-ra/ardi/logon-page.html
    
    Access point in staging environment: https://ardi-dev.medra.org/ardi-ra/ardi/logon-page.html

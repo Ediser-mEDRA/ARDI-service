@@ -27,9 +27,11 @@ The ARDI service provides persistent and web resolvable identification of copyri
 Here follows a summary of the high level workflow of ARDI web app:
   1. receives a DRS record in input
   2. validation of DRS against the schema
+     
      a) failure: error – feedback and stop the workflow
      b)	success: proceed with the workflow
   3. ARDI generation
+     
      a)if the DRS does not contain an ARDI: creates a unique ARDI, assigns it to the DRS and proceeds with the workflow as a create
      b)	if the DRS already contains an ARDI: proceeds with the workflow as an update
   4. onboards data with the Copyright Hub

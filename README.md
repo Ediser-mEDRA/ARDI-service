@@ -43,8 +43,8 @@ Here follows a summary of the high level workflow of ARDI web app:
   8. mints the ARDI in the DOI Handle System, providing persistence and resolution driven by DOI
   9. stores results of the above operations (accounting data) and provides feedback
   
-ARDITO registration tool
-========================
+ARDITO registration tools
+=========================
 
 The entry point is the ARDI registration service REST API that allows a user to submit a DRS (Digital Rightsholder Statement) record expressing a rights notice on an individual content asset (creation in LCC terms) in a simplified but fully compliant version of the LCC DRS Schema, that is a DRS Profile for ARDI registration (lcc:DrsProfile_ARDI). Each XML file validated against this schema profile is valid also against the LCC DRS Schema. This first release of the ARDI service allows for the deposit of one DRS at the time.
 
@@ -55,7 +55,8 @@ To download the xsd of DRS profile for ARDI registration in staging environment 
 The registration of an ARDI is handled in two ways: Registration via the API for B2B registrations and XML upload interface for manual registration
     
    Registration via the API for B2B registrations
-   ==========================================
+   ==============================================
+   
    To register an ARDI  via the API for B2B registrations, the following endpoints are available:
    
    Production environment endpoint: https://ardi.medra.org/statement

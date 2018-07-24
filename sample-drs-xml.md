@@ -4,12 +4,7 @@
         <DigitalRightsholderStatement xmlns="http://www.rightscom.com/2011/drs#">
  		<DrsProfileType>lcc:DrsProfile_ARDI</DrsProfileType>
  		<Right>
- 			<!--
-			<RightIdentifier IdentifierType="lcc:ARDI">
- 				<IdentifierValue>10.29414/ardi:1524212640491</IdentifierValue>
- 			</RightIdentifier>
- 			-->
-			<RightStatus>lcc:EffectiveRight</RightStatus>
+ 			<RightStatus>lcc:EffectiveRight</RightStatus>
  			<Rightsholder>
  		             <Identifier IdentifierType="lcc:ORCID">
  				<IdentifierValue>https://orcid.org/0000-0001-6157-8808</IdentifierValue>

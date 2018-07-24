@@ -5,7 +5,7 @@ Table of contents
    * [ARDI service overview](#ardi-service-overview)
       * [High level workflow description](#high-level-workflow-description)
    * [ARDITO registration tool](#ardito-registration-tool)
-      * [Directly via the API for B2B registrations](#directly-via-the-api-for-b2b-registrations)
+      * [Registration via the API for B2B registrations](#registration-via-the-api-for-b2b-registrations)
       	* [Authorization](#authorization)
       	* [Description of the Response body](#description-of-the-response-body)
         * [DRS submission with correct parameters](#drs-submission-with-correct-parameters)
@@ -29,10 +29,12 @@ Here follows a summary of the high level workflow of ARDI web app:
   2. validation of DRS against the schema
      
      a) failure: error – feedback and stop the workflow
+     
      b)	success: proceed with the workflow
   3. ARDI generation
      
      a)if the DRS does not contain an ARDI: creates a unique ARDI, assigns it to the DRS and proceeds with the workflow as a create
+     
      b)	if the DRS already contains an ARDI: proceeds with the workflow as an update
   4. onboards data with the Copyright Hub
   5. following onboarding, ARDI and content identifiers are indexed in the Copyright Hub index, for query purposes and used by Copyright Hub front-end tools
@@ -44,37 +46,31 @@ Here follows a summary of the high level workflow of ARDI web app:
 ARDITO registration tool
 ========================
 
-The point of entry is the ARDI registration service REST API that allows a user to submit a DRS (Digital Rightsholder Statement) 
-expressing a rights notice on an individual content asset (creation in LCC terms) according to the LCC DRS schema.
+The entry point is the ARDI registration service REST API that allows a user to submit a DRS (Digital Rightsholder Statement) record expressing a rights notice on an individual content asset (creation in LCC terms) in a simplified but fully compliant version of the LCC DRS Schema, that is a DRS Profile for ARDI registration (lcc:DrsProfile_ARDI). Each XML file validated against this schema profile is valid also against the LCC DRS Schema. This first release of the ARDI service allows for the deposit of one DRS at the time.
 
-The registration of an ARDI is handled in two ways:
+To download the xsd of DRS profile for ARDI registration in production environment click [here](https://ardi.medra.org/ardi-ra/schema/drs/1.0/medra-drs.xsd).
+
+To download the xsd of DRS profile for ARDI registration in staging environment click [here](https://ardi-dev.medra.org/ardi-ra/schema/drs/1.0/medra-drs.xsd).
+
+The registration of an ARDI is handled in two ways: Registration via the API for B2B registrations and XML upload interface for manual registration
     
-   Directly via the API for B2B registrations
+   Registration via the API for B2B registrations
    ==========================================
-   Directly via the API that hold the DRS as request body, for B2B registrations.
+   To register an ARDI  via the API for B2B registrations, the following endpoints are available:
    
-   ENDPOINT: https://ardi-dev.medra.org/statement
+   Production environment endpoint: https://ardi.medra.org/statement
    
-   A valid DRS (Digital Rightsholder Statement) (application/xml) according to the LCC DRS schema. In order to allow the 
-   deposit of simple statement, the ARDI registration format contains a subset of group of elements taken from the DRS schema. In
-   mEDRA application, we have decided to simplify the structure of a Right, starting from two basic use cases:
-     
-   * an (self-published) author wishing to declare his/her copyright ownership on a content
-     
-   * a publisher wishing to indicate some basic copyright info and licence info (especially related to Open Access) on a content
-     Thus in mEDRA application a DRS is described by the following [link](https://ardi-dev.medra.org/ardi-ra/schema/drs/1.0/medra-drs.xsd).
+   Staging environment endpoint: https://ardi-dev.medra.org/statement
    
-   Finally the ARDI registration service REST API returns a JSON response to the user submitting the DRS which includes:
+   A valid DRS (application/xml) according to the LCC DRS schema must be sent in the request body.
+   
+   The ARDI registration service REST API returns a JSON response to the user submitting the DRS which includes:
     
-   * The assigned ARDI, to be stored and reused by the registrant for following updates of the same DRS or to make available the ARDI 
-     resolving to the landing page along the value chain
+   * The assigned ARDI, to be stored and reused by the registrant for following updates of the same DRS or to make it available to let users resolve to the landing page
     
-   * The full DRS metadata as submitted, that can be re-used to communicate with other systems in B2B mode. This is especially 
-     relevant once GUIs for registrants will be developed on top of existing services, as users will be able to exploit DRS in the LCC 
-     format although they might have no proficiency with it
+   * The full DRS metadata as submitted, that can be re-used to communicate with other systems in B2B mode
     
-   * The accounting data, providing results (success/failure) for each operation (creation/update)for each service (Handle System 
-      service/Hub service/Metadata service).  Example of a JSON response for a DRS update, assigned with an ARDI:
+   * The accounting data, providing results (success/failure) for each operation (creation/update) for each service (Handle System service/Hub service/Metadata service)
 
    ## Authorization
    
@@ -113,7 +109,7 @@ The registration of an ARDI is handled in two ways:
          * Http request with basic authentication
    + Request body: 
      
-   Look for the application/xml sample to paste as content in the request body [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
+   For examples of DRS to be pasted as content in the request body see [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md)
    
   + Response 200 (application/json; charset=UTF-8):
 

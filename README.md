@@ -4,7 +4,7 @@ Table of contents
    * [Table of contents](#table-of-contents)
    * [ARDI service overview](#ardi-service-overview)
       * [High level workflow description](#high-level-workflow-description)
-   * [ARDITO registration tool](#ardito-registration-tool)
+   * [ARDITO registration tools](#ardito-registration-tools)
       * [Registration via the API for B2B registrations](#registration-via-the-api-for-b2b-registrations)
       	* [Authorization](#authorization)
       	* [Description of the Response body](#description-of-the-response-body)

@@ -529,10 +529,8 @@ The following screenshot displays the link to reach the upload page.
  
  XML upload page in production enviroment: https://ardi.medra.org/ardi-ra/ardi/reserved/upload-page.html
  
- ![upload-page-ardi](https://user-images.githubusercontent.com/39902417/43138424-17cd8a36-8f4f-11e8-914b-587dde17f00e.png)
- 
  XML upload page in staging environment: https://ardi-dev.medra.org/ardi-ra/ardi/reserved/upload-page.html
  
-![upload-page-4](https://user-images.githubusercontent.com/39902417/42374231-d7ffe538-8117-11e8-83fd-3e608ce798db.PNG)
+![upload-page-ardi](https://user-images.githubusercontent.com/39902417/43138424-17cd8a36-8f4f-11e8-914b-587dde17f00e.png)
 
 The JSON response body is the same as in the Result of registration via the API for B2B registrations.

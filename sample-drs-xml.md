@@ -1,79 +1,89 @@
-# Example of the DRS profile for an ARDI registration (the xml to be submitted should look like the following)
+# Example of the DRS to register an ARDI for a book
 	
-	              
-	      <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-		<DigitalRightsholderStatement xmlns="http://www.rightscom.com/2011/drs#" 
-		xmlns:drs="http://www.rightscom.com/2011/drs#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-		xsi:schemaLocation="http://www.rightscom.com/2011/drs# https://ardi-dev.medra.org/schema/drs/1.0/medra-drs.xsd">
-			<DrsProfileType>lcc:DrsProfile_ARDI</DrsProfileType>
-			<Right>
-				<RightStatus>lcc:EffectiveRight</RightStatus>
-				<Rightsholder>
-					<Identifier IdentifierType="lcc:ORCID">
-						<IdentifierValue>orcid.org/0000-0001-6157-8808</IdentifierValue>
-					</Identifier>
-					<Name>
-						<NameValue>Anna Lionetti</NameValue>
-						<NamePart NamePartType="lcc:KeyName">Lionetti</NamePart>
-						<NamePart NamePartType="lcc:NamesBeforeKeyName">Anna</NamePart>
-					</Name>
-				</Rightsholder>
-				<Rightsholder>
-					<Identifier IdentifierType="lcc:ORCID">
-						<IdentifierValue>orcid.org/0000-0001-7410-6682</IdentifierValue>
-					</Identifier>
-					<Name>
-						<NameValue>Pierfrancesco Attanasio</NameValue>
-						<NamePart NamePartType="lcc:KeyName">Attanasio</NamePart>
-						<NamePart NamePartType="lcc:NamesBeforeKeyName">Pierfrancesco</NamePart>
-					</Name>
-				</Rightsholder>
-				<ControlledCreation>
-					<Identifier IdentifierType="lcc:ISBN">
-						<IdentifierValue>9788899630096</IdentifierValue>
-					</Identifier>
-					<Identifier IdentifierType="lcc:DOI">
-						<IdentifierValue>10.978.8899630/096</IdentifierValue>
-					</Identifier>
-					<Identifier IdentifierType="lcc:ISBNA">
-						<IdentifierValue>10.978.8899630/096</IdentifierValue>
-					</Identifier>
-					<Name>Il mercato delle riviste scientifiche italiane: una ricerca</Name>
-					<CreationType>lcc:LexicalWork</CreationType>
-				<URL>http://www.giornaledellalibreria.it/presentazione-tra-editoria-e-universita-i-risultati-
-				del-gruppo-di-lavoro-universita-di-verona-cineca-e-aie-2585.html</URL>
-				</ControlledCreation>
-				<UseType>lcc:All</UseType>
-				<ControlType>lcc:All</ControlType>
-				<RightsNotice>
-					<Name>Anna Lionetti</Name>
-					<Name>Pierfrancesco Attanasio</Name>
-					<Year>2016</Year>
-					<Extension Language="eng">This article is published online with Open Access and 
-					distributed under the terms of the Creative Commons Attribution Non-Commercial License 
-					(CC BY-NC 4.0).</Extension>
-					<Extension Language="ita">Il testo è rilasciato dagli autori in licenza Creative Commons 
-					Attribuzione - Non commerciale (CC-BY-NC 4.0)</Extension>
-				</RightsNotice>
-				<FurtherRightsInformation>	
-				<RelatedRightAssignment IdentifierType="lcc:URI">
-						<IdentifierValue>https://creativecommons.org/licenses/by-
-						nc/4.0/</IdentifierValue>
-					</RelatedRightAssignment>
-				<RightsAssignmentType>lcc:CC_License_BY_NC</RightsAssignmentType>
-					<FurtherRightsInformationType>lcc:ApplicableLicense</FurtherRightsInformationType>
-				</FurtherRightsInformation>
-				<Territory>lcc:World</Territory>
-				<StartTime>2016-01-01</StartTime>
-				<PercentageShare>100</PercentageShare>
-				<IsExclusive>lcc:True</IsExclusive>
-			</Right>
-			<Asserter>
-				<Identifier IdentifierType="lcc:ISNI">
-					<IdentifierValue>1234-5678-9876-4444</IdentifierValue>
-				</Identifier>
-				<Name>Italian Publisher Association</Name>
-			</Asserter>
-			<AssertionDateTime>2017-09-10T13:44:01</AssertionDateTime>
-		</DigitalRightsholderStatement>
+        <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        <DigitalRightsholderStatement xmlns="http://www.rightscom.com/2011/drs#">
+ 		<DrsProfileType>lcc:DrsProfile_ARDI</DrsProfileType>
+ 		<Right>
+ 			<RightIdentifier IdentifierType="lcc:ARDI">
+ 				<IdentifierValue>10.29414/ardi:1524212640491</IdentifierValue>
+ 			</RightIdentifier>
+ 			<RightStatus>lcc:EffectiveRight</RightStatus>
+ 			<Rightsholder>
+ 		             <Identifier IdentifierType="lcc:ORCID">
+ 				<IdentifierValue>https://orcid.org/0000-0001-6157-8808</IdentifierValue>
+ 			     </Identifier>
+ 			     <Name>
+ 				<NameValue>Anna Mazzucchi</NameValue>
+ 				<NamePart NamePartType="lcc:NamesBeforeKeyName">Anna</NamePart>
+ 				<NamePart NamePartType="lcc:KeyName">Mazzucchi</NamePart>
+ 			     </Name>
+ 			     <Contact>
+ 				<Name>Anna Mazzucchi</Name>
+ 				<EmailAddress>al.rights@mybook.it</EmailAddress>
+ 				<PhoneNumber>00392234523890</PhoneNumber>
+ 				<PostalAddress>Corso di Porta Romana 108 20122 Milano, Italia</PostalAddress>
+ 				<URL></URL>
+ 			      </Contact>
+ 		        </Rightsholder>
+ 		        <Rightsholder>
+ 		  	    <Name>
+ 		  		<NameValue>Lionetti &amp;Co.</NameValue>
+ 		  	    </Name>
+ 		  	    <Contact>
+ 		  		<Name>Lionetti &amp; Co.</Name>
+ 		  		<EmailAddress>diritti@lionettieco.it</EmailAddress>
+ 		  		<PhoneNumber>003927769520</PhoneNumber>
+ 		  		<PostalAddress>Via dei Pini 27, 20142 Milano, Italia</PostalAddress>
+ 		  		<URL>http://www.lionettieco.it</URL>
+ 		  	     </Contact>
+ 		        </Rightsholder>
+ 		        <ControlledCreation>
+ 		  	    <Identifier IdentifierType="lcc:ISBN">
+ 		  		<IdentifierValue>9791220032926</IdentifierValue>
+ 		  	    </Identifier>
+ 		  	    <Identifier IdentifierType="lcc:ISBNA">
+ 		  		<IdentifierValue>1749/10.979.12200/32926</IdentifierValue>
+ 		  	    </Identifier>
+ 		  	    <Identifier IdentifierType="lcc:DOI">
+ 		  		<IdentifierValue>1749/10.979.12200/32926</IdentifierValue>
+ 		  	    </Identifier>
+ 		  	    <Name>My first book</Name>
+ 		  	    <CreationType>lcc:Book</CreationType>
+ 		        </ControlledCreation>
+ 		  <UseType>lcc:Some</UseType>
+ 		  <ControlType>lcc:Some</ControlType>
+ 		  <RightsNotice>
+ 		  	<Name>Anna Mazzucchi</Name>
+ 		  	<Name>Lionetti &amp;Co.</Name>
+ 		  	<Year>2018</Year>
+ 		  	<Extension Language="ita">Alcuni diritti riservati.</Extension>
+ 		  	<Extension Language="eng">Some rights reserved.</Extension>
+ 		  	<Extension Language="ita">Per usi commerciali del testo o parti del testo è necessaria autorizzazione dei rightholder. Contattare Anna Mazzucchi alla mail al.rights@mybook.com</Extension>
+ 		  	<Extension Language="eng">For commercial use of the work or of parts of the work, permission from the rightholder is needed. Please contact Anna Mazzucchi at al.rights@mybook.com</Extension>
+ 		  </RightsNotice>
+ 		  <FurtherRightsInformation>
+ 		  	<RightsAssignmentType>lcc:CC_License_BY_NC</RightsAssignmentType>
+ 		  	<RelatedRightAssignment IdentifierType="lcc:URI">
+ 		  		<IdentifierValue>https://creativecommons.org/licenses/by-nc/4.0/</IdentifierValue>
+ 		  	</RelatedRightAssignment>
+ 		  	<FurtherRightsInformationType>lcc:ApplicableLicense</FurtherRightsInformationType>
+ 		  </FurtherRightsInformation>
+ 		  <Territory>lcc:World</Territory>
+ 		  <PercentageShare>100</PercentageShare>
+ 		  <IsExclusive>lcc:True</IsExclusive>
+ 		</Right>
+ 		<Asserter>
+ 		    <Identifier IdentifierType="lcc:ORCID">
+ 			<IdentifierValue>https://orcid.org/0000-0001-6157-8808</IdentifierValue>
+ 		    </Identifier>
+ 		    <Name>Anna Mazzucchi</Name>
+ 		    <Contact>
+ 			<Name>Anna Mazzucchi</Name>
+ 			<EmailAddress>anna.mazzucchi@mybook.com</EmailAddress>
+ 			<PhoneNumber>00392234523890</PhoneNumber><PostalAddress>Corso di Porta Romana 108 20122 Milano (MI) (Italia)</PostalAddress>
+ 			<URL></URL>
+ 		    </Contact>
+ 	        </Asserter>
+ 		<AssertionDateTime>2018-05-18T15:31:16.221+02:00</AssertionDateTime>
+        </DigitalRightsholderStatement>
           

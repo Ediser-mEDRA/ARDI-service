@@ -257,39 +257,39 @@ The registration of an ARDI is handled in two ways: Registration via the API for
   
   To be sure that the submission has been successfully achieved, in the JSON response body the following array must contain **SUCCESS** result for all the operations
   
-        { ...
-          "accounting": [
-                        {
-                          "ardi": "10.29414/ardi:1510841716516",
-                          "service": "HANDLE",
-                          "operation": "UPDATE",
-                          "result": "SUCCESS",
-                          "resultDescription": null,
-                          "timestamp": "24-11-2017 13:00:23"
-                        }, {
-                            "ardi": "10.29414/ardi:1510841716516",
-                             "service": "HUB",
-                             "operation": "UPDATE",
-                            "result": "SUCCESS",
-                            "resultDescription": null,
-                            "timestamp": "24-11-2017 13:00:25"
-                          }, {
-                            "ardi": "10.29414/ardi:1510841716516",
-                            "service": "METADATA",
-                            "operation": "UPDATE",
-                            "result": "SUCCESS",
-                            "resultDescription": null,
-                            "timestamp": "24-11-2017 13:00:25"
-                          }
-                      ]
-           ...
-        }
+        	{ ...
+          		"accounting": [
+				{
+				  "ardi": "10.29414/ardi:1510841716516",
+				  "service": "HANDLE",
+				  "operation": "UPDATE",
+				  "result": "SUCCESS",
+				  "resultDescription": null,
+				  "timestamp": "24-11-2017 13:00:23"
+				}, {
+				    "ardi": "10.29414/ardi:1510841716516",
+				     "service": "HUB",
+				     "operation": "UPDATE",
+				    "result": "SUCCESS",
+				    "resultDescription": null,
+				    "timestamp": "24-11-2017 13:00:25"
+				  }, {
+				    "ardi": "10.29414/ardi:1510841716516",
+				    "service": "METADATA",
+				    "operation": "UPDATE",
+				    "result": "SUCCESS",
+				    "resultDescription": null,
+				    "timestamp": "24-11-2017 13:00:25"
+				  }
+			      ]
+           		...
+        	}
         
    In case one or more operation fail, the JSON response contains **FAILURE**, as in the following example
    
-        {
-           ...
-           "accounting": [
+        	{
+           		...
+           		"accounting": [
                         {
                           "ardi": "10.29414/ardi:1530787684558",
                           "service": "HANDLE",

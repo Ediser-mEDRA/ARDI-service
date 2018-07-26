@@ -246,14 +246,15 @@ The registration of an ARDI is handled in two ways: Registration via the API for
                   "endTimestamp": "24-11-2017 13:00:25"
               }
   
-  Description of the Response body
-  ================================
+ Description of the Response body
+ ================================ 
   
   The response body provided through the REST API in the form of a JSON includes:
-     * The assigned ARDI
-     * The full DRS metadata in the LCC compliant format.
-     * The accounting data, providing results (success/failure) for each operation (creation/update) for each service (Handle System/Hub service/Metadata service).
-      
+       
+   + The assigned ARDI
+   + The full DRS metadata in the LCC compliant format.
+   + The accounting data, providing results (success/failure) for each operation (creation/update) for each service (Handle System/Hub service/Metadata service).
+  
   To be sure that the submission has been successfully achieved, in the JSON response body the following array must contain **SUCCESS** result for all the operations
   
         { ...

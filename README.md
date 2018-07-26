@@ -257,7 +257,8 @@ The registration of an ARDI is handled in two ways: Registration via the API for
   
   To be sure that the submission has been successfully achieved, in the JSON response body the following array must contain **SUCCESS** result for all the operations
   
-             { ...
+             
+	     { ...
           		"accounting": [
 				{
 				  "ardi": "10.29414/ardi:1510841716516",
@@ -287,7 +288,8 @@ The registration of an ARDI is handled in two ways: Registration via the API for
         
    In case one or more operation fail, the JSON response contains **FAILURE**, as in the following example
    
-               {
+               
+	       {
            		...
            		"accounting": [
                         {

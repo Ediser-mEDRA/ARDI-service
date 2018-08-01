@@ -320,9 +320,9 @@ The registration of an ARDI is handled in two ways: Registration via the API for
               ...
             }
    
-   <!--
+   
    The following table describes the JSON fields in the response body:
-   <!--
+   
    | Field           | Description                                |
    | :-------        | :----------                                |
    | user            | The user that perform the DRS submission   |
@@ -339,7 +339,7 @@ The registration of an ARDI is handled in two ways: Registration via the API for
    | resulDescription  | In case of **SUCCESS**, the field contains value *null*, instead (**FAILURE**), a nearly human readable message that describes what wrong during the submission process|
    | timestamp         | The process time of each service in format DD-MM-YYYY HH:mi:ss|
    
-   -->
+   
    
    ## DRS submission with wrong username
    

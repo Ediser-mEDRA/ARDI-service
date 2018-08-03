@@ -435,7 +435,7 @@ The registration of an ARDI is handled in two ways: Registration via the API for
    
    ## DRS submission with wrong attribute value of an identifier
    
-   The wrong attribute value is **<Identifier IdentifierType="lxx:ORCID">**
+   The wrong attribute value is `<Identifier IdentifierType="lxx:ORCID">**`
    + Request body: 
      
          <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -533,7 +533,7 @@ The registration of an ARDI is handled in two ways: Registration via the API for
    
    ## DRS submission with wrong element
    
-   The wrong element is **<Rights>**
+   The wrong element is `<Rights>`
    + Request body: 
      
          <?xml version="1.0" encoding="UTF-8" standalone="no"?>

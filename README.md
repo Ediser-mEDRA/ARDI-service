@@ -433,7 +433,7 @@ The registration of an ARDI is handled in two ways: Registration via the API for
      	  No body returned for response
                
    
-   ## DRS submission wrong attribute value of an identifier
+   ## DRS submission with wrong attribute value of an identifier
    
    + Request body: 
      
@@ -530,7 +530,7 @@ The registration of an ARDI is handled in two ways: Registration via the API for
                }
    
    
-   ## DRS submission with wrong element "Rights"
+   ## DRS submission with wrong element
    
    + Request body: 
      

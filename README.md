@@ -261,9 +261,9 @@ The registration of an ARDI is handled in two ways: Registration via the API for
    
    | Field           | Description                                |
    | :-------        | :----------                                |
-   | User            | The user that performs the DRS submission   |
-   | Statement       | The whole DRS submitted in XML format and transformed in JSON format|
-   |Accounting| The results for operations and services|
+   |user            | The user that performs the DRS submission   |
+   |statement       | The whole DRS submitted in XML format and transformed in JSON format|
+   |accounting| The results for operations and services|
    |startTimestamp|The start time of DRS registration in format DD-MM-YYYY HH:mi:ss|
    |endTimestamp|The end time of DRS registration in format DD-MM-YYYY HH:mi:ss|
    
@@ -282,7 +282,7 @@ The registration of an ARDI is handled in two ways: Registration via the API for
    | service           | The three services involved in the submission process (HANDLE, COPYRIGHT HUB, METADATA)|
    | operation         | The two allowed operations (CREATION and UPDATE)|
    | result            | The result type be either (SUCCESS or FAILURE)|
-   | resulDescription  | In case of **SUCCESS**, the field contains value *null*, in case of (**FAILURE**), a message describes what went wrong during the submission process|
+   | resultDescription  | In case of **SUCCESS**, the field contains value *null*, in case of (**FAILURE**), a message describes what went wrong during the submission process|
    | timestamp         | The process time of each service in format DD-MM-YYYY HH:mi:ss|
    
   

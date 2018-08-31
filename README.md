@@ -60,9 +60,9 @@ The registration of an ARDI is handled in two ways: Registration via the API for
    
    To register an ARDI  via the API for B2B registrations, the following endpoints are available:
    
-   Production environment endpoint: https://ardi.medra.org/statement
+   Production environment endpoint: https://ardi.medra.org/ardi-ra/statement
    
-   Staging environment endpoint: https://ardi-dev.medra.org/statement
+   Staging environment endpoint: https://ardi-dev.medra.org/ardi-ra/statement
    
    A valid DRS (application/xml) according to the LCC DRS schema must be sent in the request body.
    

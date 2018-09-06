@@ -652,14 +652,12 @@ The registration of an ARDI is handled in two ways: Registration via the API for
    ![login-page](https://user-images.githubusercontent.com/39902417/41343402-ca92bd7e-6efe-11e8-8985-083fa8b8ee57.PNG)
    
    ## Authorization
- The user must enter his login credential (username and password) on mEDRA in order to achieve the submission.
+ The user must enter his login credential (username and password) on ARDI web app in order to achieve the submission.
 
 ### How to reach the upload page?
 The following screenshot displays the link to reach the upload page.
 
 ![link-upload-page-ardi](https://user-images.githubusercontent.com/39902417/43138453-3343555c-8f4f-11e8-857e-e0944c0a5583.png)
-
- By clicking the link in screenshot above the user gets to the page where to select and upload an XML file containing a valid DRS to be submitted.
  
  XML upload page in production enviroment: https://ardi.medra.org/ardi-ra/ardi/reserved/upload-page.html
  

@@ -2,7 +2,8 @@
 	
         
       <?xml version="1.0" encoding="UTF-8"?>
-      <DigitalRightsholderStatement xmlns="http://www.rightscom.com/2011/drs#" xmlns:drs="http://www.rightscom.com/2011/drs#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rightscom.com/2011/drs# medra-drs.xsd">
+      <DigitalRightsholderStatement xmlns="http://www.rightscom.com/2011/drs#" xmlns:drs="http://www.rightscom.com/2011/drs#" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rightscom.com/2011/drs# medra-drs.xsd">
 	<!-- obbligatorio: inseriremo sempre il valore lcc:DrsProfile_ARDI-->
 	<DrsProfileType>lcc:DrsProfile_ARDI</DrsProfileType>
 	<!-- obbligatorio -->
@@ -60,4 +61,4 @@
         </Asserter>
         <!-- obbligatorio: cosa metto? -->
         <AssertionDateTime>2018-07-01T17:26:01</AssertionDateTime>
-      </DigitalRightsholderStatement>
+    </DigitalRightsholderStatement>

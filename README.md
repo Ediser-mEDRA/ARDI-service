@@ -100,7 +100,8 @@ The registration of an ARDI is handled in two ways: Registration via the API for
    ![basic-authorization](https://user-images.githubusercontent.com/39902417/42159024-9f91cc7a-7df2-11e8-91cf-61c33a380b6d.png)
     -->
 ## DRS sample
- [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md) is a sample of DRS to be registered
+ [Here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md) is an example of the DRS to register an ARDI for a book.
+ 
 ## DRS submission with correct parameters
 
    + Request Method

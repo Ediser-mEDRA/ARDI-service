@@ -6,7 +6,8 @@ Table of contents
       * [High level workflow description](#high-level-workflow-description)
    * [ARDITO registration tools](#ardito-registration-tools)
       * [Registration via the API for B2B registrations](#registration-via-the-api-for-b2b-registrations)
-      	* [Authorization](#authorization)
+        * [Authorization](#authorization)
+        * [DRS sample](#drs-sample)
       	* [Description of the Response body](#description-of-the-response-body)
         * [DRS submission with correct parameters](#drs-submission-with-correct-parameters)
       	* [DRS submission with wrong username](#drs-submission-with-wrong-username)
@@ -76,7 +77,7 @@ The registration of an ARDI is handled in two ways: Registration via the API for
 
    ## Authorization
    
-   This API requires a basic authentication, the user must be registered (username and password) on mEDRA in order to achieve the
+   This API requires a basic authentication, the user must be registered (username and password) on ARDI web app in order to achieve the
    registration. Request valid DRS (Digital Rightsholder Statement) from request body ({application/xml; charset=utf-8})
    
    ### Required data for ARDI registration
@@ -98,7 +99,8 @@ The registration of an ARDI is handled in two ways: Registration via the API for
    <!--
    ![basic-authorization](https://user-images.githubusercontent.com/39902417/42159024-9f91cc7a-7df2-11e8-91cf-61c33a380b6d.png)
     -->
-
+## DRS sample
+ [here](https://github.com/Ediser/ARDI-service/blob/master/sample-drs-xml.md) is a sample of DRS to be registered
 ## DRS submission with correct parameters
 
    + Request Method

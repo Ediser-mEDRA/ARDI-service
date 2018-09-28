@@ -52,7 +52,11 @@ The entry point is the ARDI registration service REST API that allows a user to 
 
 To download the xsd of DRS profile for ARDI registration in production environment click [here](https://ardi.medra.org/ardi-ra/schema/drs/1.0/medra-drs.xsd).
 
+To download the xsd allowed values of DRS profile for ARDI registration in production environment click [here](https://ardi.medra.org/ardi-ra/schema/drs/1.0/allowed-values.xsd).
+
 To download the xsd of DRS profile for ARDI registration in staging environment click [here](https://ardi-dev.medra.org/ardi-ra/schema/drs/1.0/medra-drs.xsd).
+
+To download the xsd allowed values of DRS profile for ARDI registration in staging environment click [here](https://ardi-dev.medra.org/ardi-ra/schema/drs/1.0/allowed-values.xsd).
 
 The registration of an ARDI is handled in two ways: Registration via the API for B2B registrations and XML upload interface for manual registration
     

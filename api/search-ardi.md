@@ -32,7 +32,7 @@ The API accepts an HTTP GET request with one or more of the following parameters
 HTTP Response
 ------------
 ### SUCCESS
-In case of success, an HTTP response will be returned with status code `200` and as body a json (`Content-Type="application/json;charset=UTF-8"`) array of objects, each one with only one key (`ardi`) and a value of type string:
+In case of success, an HTTP response will be returned with status code `200` and as body a json (`Content-Type="application/json;charset=UTF-8"`) array of objects[^1], each one with only one key (`ardi`) and a value of type string:
 ```
 [
  {"ardi":"{ardi1}"},
@@ -43,7 +43,7 @@ In case of success, an HTTP response will be returned with status code `200` and
 
 The array will be empty if no ARDI matches the query parameters.
 
-An array of objects was chosen (and not, for example, an array of strings) because it can be easily extended with other keys.
+[^1]: An array of objects was chosen (and not, for example, an array of strings) because it can be easily extended with other keys.
 
 ### FAILURE
 If an error occurs, an HTTP response will be returned with status code other than `200` and as body a json (`Content-Type="application/json;charset=UTF-8"`) object with the following structure

@@ -61,6 +61,7 @@ If an error occurs, an HTTP response will be returned with status code other tha
 |timestamp|when the response was sent (in UNIX time)|
 |status|the HTTP status code|
 |error|the HTTP status description|
+|exception|the arisen exception|
 |message|the description of the error occurred|
 |path|the URL path of the endpoint|
 
@@ -80,6 +81,7 @@ Body:
  "timestamp": 1530791951195,
  "status": 400,
  "error": "Bad Request",
+ "exception":"java.lang.IllegalArgumentException",
  "message": "missing parameter",
  "path": "/ardi-ra/api/search-ardi"              
 }

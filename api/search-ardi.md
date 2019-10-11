@@ -13,21 +13,27 @@ The endpoints are public (no authentication is required).
 
 HTTP Request
 ------------
-The API accepts an HTTP GET request with one or more of the following parameters:
+The API accepts an HTTP GET request with one or more of the following parameters, where:
+
+* **HTTP PARAMETER**: key of the HTTP parameter;
+* **CASE SENSITIVE**: if the search will be case sensitive or not;
+* **SEARCH MODE**: how the search on that field will be done;
+* **NOTES**: additional notes;
+* **DRS ELEMENT**: the DRS element.
 
 | HTTP PARAMETER |	CASE SENSITIVE	| SEARCH MODE |	NOTES |DRS ELEMENT|
 | ----------- | ----------- | ------------| ---------- |------------|
-|ardi|NO|LIKE||/DigitalRightsholderStatement/Right/RightIdentifier|
-|creationIdentifierType|NO|EXACT||/DigitalRightsholderStatement/Right/ControlledCreation/Identifier/@IdentifierType|
-|creationIdentifierValue|YES|EXACT||/DigitalRightsholderStatement/Right/ControlledCreation/Identifier/IdentifierValue|
-|creationType|NO|EXACT||/DigitalRightsholderStatement/Right/ControlledCreation/CreationType|
-|creationName|NO|LIKE||/DigitalRightsholderStatement/Right/ControlledCreation/Name|
-|asserterName|NO|LIKE||/DigitalRightsholderStatement/Asserter/Name|
-|startAssertionDate|-|EQUAL OR AFTER|in the form dd/MM/yyyy|/DigitalRightsholderStatement/AssertionDateTime|
-|endAssertionDate|-|EQUAL OR BEFORE|in the form dd/MM/yyyy|/DigitalRightsholderStatement/AssertionDateTime|
-|rightsNoticeName|NO|LIKE||/DigitalRightsholderStatement/Right/RightsNotice/Name|
-|rightsNoticeYear|-|EXACT|in the form yyyy|/DigitalRightsholderStatement/Right/RightsNotice/Year|
-|rightsNoticeExtension|NO|LIKE||/DigitalRightsholderStatement/Right/RightsNotice/Extension|
+|ardi|NO|LIKE||DigitalRightsholderStatement/Right/RightIdentifier|
+|creationIdentifierType|NO|EXACT||DigitalRightsholderStatement/Right/ControlledCreation/Identifier/@IdentifierType|
+|creationIdentifierValue|YES|EXACT||DigitalRightsholderStatement/Right/ControlledCreation/Identifier/IdentifierValue|
+|creationType|NO|EXACT||DigitalRightsholderStatement/Right/ControlledCreation/CreationType|
+|creationName|NO|LIKE||DigitalRightsholderStatement/Right/ControlledCreation/Name|
+|asserterName|NO|LIKE||DigitalRightsholderStatement/Asserter/Name|
+|startAssertionDate|-|EQUAL OR AFTER|in the form dd/MM/yyyy|DigitalRightsholderStatement/AssertionDateTime|
+|endAssertionDate|-|EQUAL OR BEFORE|in the form dd/MM/yyyy|DigitalRightsholderStatement/AssertionDateTime|
+|rightsNoticeName|NO|LIKE||DigitalRightsholderStatement/Right/RightsNotice/Name|
+|rightsNoticeYear|-|EXACT|in the form yyyy|DigitalRightsholderStatement/Right/RightsNotice/Year|
+|rightsNoticeExtension|NO|LIKE||DigitalRightsholderStatement/Right/RightsNotice/Extension|
 
 HTTP Response
 ------------

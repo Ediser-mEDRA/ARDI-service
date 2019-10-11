@@ -15,24 +15,24 @@ HTTP Request
 ------------
 The API accepts an HTTP GET request with one or more of the following parameters:
 
-| HTTP PARAMETER |	CASE SENSITIVE	| SEARCH MODE |	NOTES |
-| ----------- | ----------- | ------------| ---------- |
-|ardi|NO|LIKE||
-|creationIdentifierType|NO|EXACT||
-|creationIdentifierValue|YES|EXACT||
-|creationType|NO|EXACT||
-|creationName|NO|LIKE||
-|asserterName|NO|LIKE||
-|startAsserterDate|-|EQUAL OR AFTER|in the form dd/MM/yyyy|
-|endAsserterDate|-|EQUAL OR BEFORE|in the form dd/MM/yyyy|
-|rightsNoticeName|NO|LIKE||
-|rightsNoticeYear|-|EXACT|in the form yyyy|
-|rightsNoticeExtension|NO|LIKE||
+| HTTP PARAMETER |	CASE SENSITIVE	| SEARCH MODE |	NOTES |DRS ELEMENT|
+| ----------- | ----------- | ------------| ---------- |------------|
+|ardi|NO|LIKE||/DigitalRightsholderStatement/Right/RightIdentifier|
+|creationIdentifierType|NO|EXACT||/DigitalRightsholderStatement/Right/ControlledCreation/Identifier/@IdentifierType|
+|creationIdentifierValue|YES|EXACT||/DigitalRightsholderStatement/Right/ControlledCreation/Identifier/IdentifierValue|
+|creationType|NO|EXACT||/DigitalRightsholderStatement/Right/ControlledCreation/CreationType|
+|creationName|NO|LIKE||/DigitalRightsholderStatement/Right/ControlledCreation/Name|
+|asserterName|NO|LIKE||/DigitalRightsholderStatement/Asserter/Name|
+|startAssertionDate|-|EQUAL OR AFTER|in the form dd/MM/yyyy|/DigitalRightsholderStatement/AssertionDateTime|
+|endAssertionDate|-|EQUAL OR BEFORE|in the form dd/MM/yyyy|/DigitalRightsholderStatement/AssertionDateTime|
+|rightsNoticeName|NO|LIKE||/DigitalRightsholderStatement/Right/RightsNotice/Name|
+|rightsNoticeYear|-|EXACT|in the form yyyy|/DigitalRightsholderStatement/Right/RightsNotice/Year|
+|rightsNoticeExtension|NO|LIKE||/DigitalRightsholderStatement/Right/RightsNotice/Extension|
 
 HTTP Response
 ------------
 ### SUCCESS
-In case of success, an HTTP response will be returned with status code `200` and as body a json (`Content-Type="application/json;charset=UTF-8"`) array of objects[^1], each one with only one key (`ardi`) and a value of type string:
+In case of success, an HTTP response will be returned with status code `200` and as body a json (`Content-Type="application/json;charset=UTF-8"`) array of objects, each one with only one key (`ardi`) and a value of type string:
 ```
 [
  {"ardi":"{ardi1}"},
@@ -43,7 +43,7 @@ In case of success, an HTTP response will be returned with status code `200` and
 
 The array will be empty if no ARDI matches the query parameters.
 
-[^1]: An array of objects was chosen (and not, for example, an array of strings) because it can be easily extended with other keys.
+An array of objects was chosen (and not, for example, an array of strings) because it can be easily extended with other keys.
 
 ### FAILURE
 If an error occurs, an HTTP response will be returned with status code other than `200` and as body a json (`Content-Type="application/json;charset=UTF-8"`) object with the following structure

@@ -1,4 +1,4 @@
-Search Ardi API
+Search ARDI API
 ===============
 This API allows to retrieve a list of ARDIs given one or more search parameters.
 
@@ -41,7 +41,7 @@ In case of success, an HTTP response will be returned with status code `200` and
 ]
 ```
 
-The array will be empty if no ardi matches the query parameters.
+The array will be empty if no ARDI matches the query parameters.
 
 An array of objects was chosen (and not, for example, an array of strings) because it can be easily extended with other keys.
 

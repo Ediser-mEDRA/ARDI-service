@@ -17,9 +17,9 @@ The API accepts an HTTP GET request with one or more of the following parameters
 
 * **HTTP PARAMETER**: key of the HTTP parameter;
 * **CASE SENSITIVE**: if the search will be case sensitive or not;
-* **SEARCH MODE**: how the search on that field will be done;
+* **SEARCH MODE**: how the search on that field will be;
 * **NOTES**: additional notes;
-* **DRS ELEMENT**: the DRS element.
+* **DRS ELEMENT**: which DRS element will be queried.
 
 | HTTP PARAMETER |	CASE SENSITIVE	| SEARCH MODE |	NOTES |DRS ELEMENT|
 | ----------- | ----------- | ------------| ---------- |------------|

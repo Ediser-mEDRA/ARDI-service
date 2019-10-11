@@ -1,17 +1,19 @@
 Search Ardi API
 ===============
-This API allow you to retrieve a list of ARDI given one or more 
+This API allows to retrieve a list of ARDIs given one or more search parameters.
 
 Endpoint
 --------
 The endpoints of the API are:
+
 * staging environment: https://ardi-dev.medra.org/ardi-ra/api/search-ardi
 * production environment: https://ardi.medra.org/ardi-ra/api/search-ardi
-The endpoint are public (no authentication is required).
+
+The endpoints are public (no authentication is required).
 
 HTTP Request
 ------------
-The API accept an HTTP GET request with one or more of the following parameters:
+The API accepts an HTTP GET request with one or more of the following parameters:
 
 | HTTP PARAMETER |	CASE SENSITIVE	| SEARCH MODE |	NOTES |
 | ----------- | ----------- | ------------| ---------- |
@@ -54,15 +56,17 @@ If an error occurs, an HTTP response will be returned with status code other tha
 |message|the description of the error occurred|
 |path|the URL path of the endpoint|
 
-For example, *if no HTTP parameter is sent to the endpoint*, the HTTP response will be have a status code `400` and the following json as body:
-
- 
 Examples
 ------------
 ### 1. No HTTP parameter sent to the endpoint
 #### HTTP REQUEST
     https://ardi-dev.medra.org/ardi-ra/api/search-ardi
-#### HTTP RESPONSE (400)
+#### HTTP RESPONSE 
+Status code:
+
+    400
+
+Body:
 ```
 {
  "timestamp": 1530791951195,
@@ -75,11 +79,29 @@ Examples
 ### 2. Check if an ARDI exists
 #### HTTP REQUEST
     https://ardi-dev.medra.org/ardi-ra/api/search-ardi?ardi=10.29414/ardi:1528986002482
-#### HTTP RESPONSE (200)
-    [{"ardi":"10.29414/ardi:1528986002482"}]
+#### HTTP RESPONSE
+Status code:
+
+    200
+
+Body:
+
+    [
+     {"ardi":"10.29414/ardi:1528986002482"}
+    ]
     
 ### 3. Retrieve all ARDIs assigned to a creation with a given DOI
 #### HTTP REQUEST
     https://ardi-dev.medra.org/ardi-ra/api/search-ardi?creationIdentifierType=lcc:DOI&creationIdentifierValue=10.978.88910/0000134
-#### HTTP RESPONSE (200)
-    [{"ardi":"10.29414/ardi:15271569600022"},{"ardi":"10.29414/ardi:1533290488854"},{"ardi":"10.29414/ardi:1533290434780"}]
+#### HTTP RESPONSE
+Status code:
+
+    200
+
+Body:
+
+    [
+     {"ardi":"10.29414/ardi:15271569600022"},
+     {"ardi":"10.29414/ardi:1533290488854"},
+     {"ardi":"10.29414/ardi:1533290434780"}
+    ]

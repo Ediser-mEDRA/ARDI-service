@@ -35,6 +35,8 @@ The API accepts an HTTP GET request with one or more of the following parameters
 |rightsNoticeYear|-|EXACT|in the form yyyy|DigitalRightsholderStatement/Right/RightsNotice/Year|
 |rightsNoticeExtension|NO|LIKE||DigitalRightsholderStatement/Right/RightsNotice/Extension|
 
+All parameters are in "and", meaning that only the ARDIs with metadata matching all the sent parameters values will be returned.
+
 HTTP Response
 ------------
 ### SUCCESS

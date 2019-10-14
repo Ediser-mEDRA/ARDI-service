@@ -115,3 +115,18 @@ Body:
      {"ardi":"10.29414/ardi:1533290488854"},
      {"ardi":"10.29414/ardi:1533290434780"}
     ]
+    
+### 4. Retrieve all ARDIs assigned to a creation with a given EIDR
+#### HTTP REQUEST
+    https://ardi-dev.medra.org/ardi-ra/api/search-ardi?creationIdentifierType=lcc:EIDR_ID&creationIdentifierValue=10.5240/EA73-79D7-1B2B-B378-3A73-M
+#### HTTP RESPONSE
+Status code:
+
+    200
+
+Body:
+
+    [
+     {"ardi":"10.29414/ardi:15271569600124"},
+     {"ardi":"10.29414/ardi:1533290488875"},
+    ]
